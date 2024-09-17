@@ -33,21 +33,3 @@ function toggleNavigation() {
 document.addEventListener("DOMContentLoaded", function () {
   eventListeners(), darkMode();
 });
-
-// //CHEQUEA SI ES WEB PAGE PARA AJUSTAR LA CALIDAD DE LA IMAGEN DE FONDO
-// function checkWebP(callback) {
-//   var webP = new Image();
-//   webP.onload = webP.onerror = function () {
-//     callback(webP.height === 2);
-//   };
-//   webP.src =
-//     "data:image/webp;base64,UklGRiIAAABXRUJQVlA4TAYAAAAvAAAAHEAAEAAAAA0A0A3QAA==";
-// }
-
-// checkWebP(function (supportsWebP) {
-//   if (supportsWebP) {
-//     document.documentElement.classList.add("webp");
-//   } else {
-//     document.documentElement.classList.add("no-webp");
-//   }
-// });
