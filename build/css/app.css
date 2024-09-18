@@ -373,6 +373,24 @@ h4 {
   background-size: cover;
 }
 
+.ubicacion-redes {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.social-icons i {
+  font-size: 30px; /* Tamaño del ícono */
+  width: 40px; /* Ancho del ícono */
+  height: 40px; /* Alto del ícono */
+  display: inline-block; /* Asegura que el ancho y alto se apliquen */
+}
+
 @media (min-width: 768px) {
   .header.inicio .contenido-header {
     min-height: 69rem;
