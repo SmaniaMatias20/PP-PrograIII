@@ -375,13 +375,22 @@ h4 {
 
 .ubicacion-redes {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+}
+
+.ubicacion {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .social-icons {
+  flex: 1;
   display: flex;
   align-items: center;
-  gap: 20px;
+  justify-content: center;
+  gap: 40px;
 }
 
 .social-icons i {
