@@ -398,9 +398,13 @@ h4 {
 
 .social-icons i {
   font-size: 30px;
+  /* Tamaño del ícono */
   width: 40px;
+
   height: 40px;
+
   display: inline-block;
+
   color: #e1e1e1;
 }
 
