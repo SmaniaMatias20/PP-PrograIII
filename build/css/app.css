@@ -198,8 +198,11 @@ body {
 p {
   color: #000;
   font-size: 2rem;
-  text-align: left; /* Asegura que el texto esté alineado a la izquierda */
+  text-align: left;
+  /* Asegura que el texto esté alineado a la izquierda */
 }
+
+
 
 .contenedor {
   margin: 0 auto;
@@ -394,10 +397,11 @@ h4 {
 }
 
 .social-icons i {
-  font-size: 30px; /* Tamaño del ícono */
-  width: 40px; /* Ancho del ícono */
-  height: 40px; /* Alto del ícono */
-  display: inline-block; /* Asegura que el ancho y alto se apliquen */
+  font-size: 30px;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  color: #e1e1e1;
 }
 
 @media (min-width: 768px) {
