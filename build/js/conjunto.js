@@ -174,6 +174,27 @@ function cargarPropiedades() {
   });
 }
 
+// Función para cargar la propiedad seleccionada
+function cargarPropiedad() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const id = urlParams.get("id");
+
+  if (propiedades[id]) {
+    const propiedad = propiedades[id];
+    document.getElementById("titulo-propiedad").textContent = propiedad.titulo;
+    document.getElementById("imagen-propiedad").src = propiedad.imagen;
+    document.getElementById("descripcion-propiedad").textContent = propiedad.descripcion;
+    document.getElementById("precio-propiedad").textContent = propiedad.precio;
+    document.getElementById("sanitarios").textContent = propiedad.sanitarios;
+    document.getElementById("estacionamientos").textContent = propiedad.estacionamientos;
+    document.getElementById("dormitorios").textContent = propiedad.dormitorios;
+  } else {
+    document.body.innerHTML = "<h1 class='text-center'>Propiedad no encontrada</h1>";
+  }
+}
+
+
+
 
 /* CARGAR ARTÍCULOS EN LISTA */
 function cargarArticulos() {
@@ -219,5 +240,8 @@ document.addEventListener("DOMContentLoaded", function () {
   if (isListaPropiedades && window.location.pathname.includes("anuncios.html")) {
     // Si estamos en la página de lista de propiedades
     cargarPropiedades();
+  } else if (window.location.pathname.includes("propiedad.html")) {
+    cargarPropiedad();
   }
+
 });
