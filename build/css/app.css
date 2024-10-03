@@ -1,5 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900");
 
+:root {
+  --gris-oscuro: #3498db;
+  --verde: #71b100;
+  --naranja: #c77808;
+  --gris-claro: #333333;
+  --verde-hover: #71b100;
+
+}
+
 html {
   -webkit-text-size-adjust: 100%;
   line-height: 1.15;
@@ -199,10 +208,7 @@ p {
   color: #000;
   font-size: 2rem;
   text-align: left;
-  /* Asegura que el texto esté alineado a la izquierda */
 }
-
-
 
 .contenedor {
   margin: 0 auto;
@@ -260,7 +266,7 @@ h4 {
 }
 
 .boton-amarillo-inline {
-  background-color: #e08709;
+  background-color: var(--naranja);
   border: none;
   color: #fff;
   display: inline-block;
@@ -272,12 +278,12 @@ h4 {
 }
 
 .boton-amarillo-inline:hover {
-  background-color: #c77808;
+  background-color: var(--naranja);
   cursor: pointer;
 }
 
 .boton-amarillo-block {
-  background-color: #e08709;
+  background-color: var(--naranja);
   border: none;
   color: #fff;
   display: block;
@@ -289,12 +295,12 @@ h4 {
 }
 
 .boton-amarillo-block:hover {
-  background-color: #c77808;
+  background-color: var(--naranja);
   cursor: pointer;
 }
 
 .boton-verde {
-  background-color: #71b100;
+  background-color: var(--verde);
   border: none;
   color: #fff;
   display: inlane-block;
@@ -306,7 +312,7 @@ h4 {
 }
 
 .boton-verde:hover {
-  background-color: #619800;
+  background-color: var(--verde-hover);
   cursor: pointer;
 }
 
@@ -348,7 +354,7 @@ h4 {
 }
 
 .darkMode .resumen-propiedad .precio {
-  color: #71b100;
+  color: var(--verde);
 }
 
 .darkMode .formulario label,
@@ -601,7 +607,7 @@ h4 {
 }
 
 .texto-entrada h4:after {
-  background-color: #71b100;
+  background-color: var(--verde);
   content: "";
   display: block;
   height: 0.5rem;
@@ -614,7 +620,7 @@ h4 {
 }
 
 .testimonial {
-  background-color: #71b100;
+  background-color: var(--verde);
   border-radius: 2rem;
   color: #fff;
   font-size: 2.4rem;
@@ -772,28 +778,21 @@ h4 {
 @media (max-width: 768px) {
   .footer .contenedor-footer {
     flex-direction: column;
-    /* Cambiar a columna en pantallas pequeñas */
     align-items: center;
   }
 
   .ubicacion-redes {
     flex-direction: column;
-    /* Cambiar a columna para la ubicación y redes sociales */
     align-items: center;
     margin-bottom: 1rem;
   }
 
   .social-icons {
     justify-content: center;
-    /* Centrar iconos sociales */
     margin-bottom: 1rem;
-    /* Espacio entre los iconos y la ubicación */
   }
 
   .ubicacion {
     width: 100%;
-    /* Ocupar todo el ancho */
   }
 }
-
-/*# sourceMappingURL=app.css.map */

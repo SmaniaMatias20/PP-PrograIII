@@ -33,61 +33,102 @@ function toggleNavigation() {
   document.querySelector(".navegacion").classList.toggle("mostrar");
 }
 
-/*TERMINA DE CARGAR LA PAGINA Y CARGA LAS FUNCIONES*/
-document.addEventListener("DOMContentLoaded", function () {
-  eventListeners(), darkMode();
-  cargarArticulo();
-});
+// /*TERMINA DE CARGAR LA PAGINA Y CARGA LAS FUNCIONES*/
+// document.addEventListener("DOMContentLoaded", function () {
+//   eventListeners(), darkMode();
+//   cargarArticulo();
+// });
 
-/*ACTUALIZAR DETALLES DEL ARTICULO*/
+const articulos = [
+  {
+    id: 1,
+    titulo: 'Ideas para organizar tu hogar en espacios pequeños',
+    fecha: '10/02/2024',
+    autor: 'Tanoni Matias',
+    contenido: 'Descubre cómo aprovechar cada rincón de tu casa...',
+    imagen: 'build/img/blog1.jpg',
+  },
+  {
+    id: 2,
+    titulo: 'Colores que serán tendencia en 2024 para tu hogar',
+    fecha: '25/03/2024',
+    autor: 'Palopolo Lujan',
+    contenido: 'Te mostramos los colores que estarán en auge este año...',
+    imagen: 'build/img/blog2.jpg',
+  },
+  {
+    id: 3,
+    titulo: 'Cómo crear un jardín interior en casa',
+    fecha: '12/07/2024',
+    autor: 'Smania Matias',
+    contenido: 'Aprende a diseñar y mantener un pequeño jardín...',
+    imagen: 'build/img/blog3.jpg',
+  },
+  {
+    id: 4,
+    titulo: 'Consejos para elegir los mejores muebles para tu sala',
+    fecha: '03/10/2024',
+    autor: 'Peña Enzo',
+    contenido: 'Encuentra los muebles ideales para tu sala de estar...',
+    imagen: 'build/img/blog4.jpg',
+  }
+];
+
+/* CARGAR ARTÍCULOS EN LISTA */
+function cargarArticulos() {
+  const contenedor = document.querySelector("main.contenedor");
+
+  articulos.forEach(articulo => {
+    const article = document.createElement('article');
+    article.classList.add('entrada-blog');
+
+    article.innerHTML = `
+      <div class="imagen">
+        <picture>
+          <source srcset="${articulo.imagen.replace('.jpg', '.webp')}" type="image/webp" />
+          <source srcset="${articulo.imagen}" type="image/jpeg" />
+          <img loading="lazy" src="${articulo.imagen}" alt="Imagen Blog ${articulo.id}" />
+        </picture>
+      </div>
+      <div class="texto-entrada">
+        <a href="articulo.html?id=${articulo.id}" class="enlace-articulo" data-id="${articulo.id}">
+          <h4>${articulo.titulo}</h4>
+          <p>Escrito el: <span>${articulo.fecha}</span> por: <span>${articulo.autor}</span></p>
+          <p>${articulo.contenido}</p>
+        </a>
+      </div>
+    `;
+    contenedor.appendChild(article);
+  });
+}
+
+/* CARGAR DETALLES DEL ARTÍCULO */
 function cargarArticulo() {
   const params = new URLSearchParams(window.location.search);
   const articuloId = params.get('id');
-  console.log(articuloId);
 
-  const articulos = {
-    1: {
-      titulo: 'Ideas para organizar tu hogar en espacios pequeños',
-      fecha: '10/02/2024',
-      autor: 'Admin',
-      contenido:
-        'Descubre cómo aprovechar cada rincón de tu casa, optimizando el espacio en áreas reducidas sin sacrificar la comodidad ni el estilo. En este artículo, exploraremos soluciones inteligentes y prácticas para organizar tu hogar en espacios pequeños. Desde el uso de muebles multifuncionales hasta la implementación de estanterías flotantes, aprenderás a maximizar el espacio vertical y a utilizar los rincones olvidados de tu casa. Además, te damos consejos sobre cómo elegir los colores adecuados para ampliar visualmente las habitaciones y mantener una sensación de amplitud y confort en todo momento.',
-      imagen: 'build/img/blog1.jpg'
-    },
-    2: {
-      titulo: 'Colores que serán tendencia en 2024 para tu hogar',
-      fecha: '25/03/2024',
-      autor: 'Admin',
-      contenido:
-        'Te mostramos los colores que estarán en auge este año y cómo incorporarlos de manera efectiva en cada estancia de tu hogar. El 2024 trae consigo una paleta de colores vibrante y sofisticada, perfecta para darle un toque moderno a cualquier hogar. Desde tonos tierra cálidos hasta matices audaces como el azul marino y el verde esmeralda, descubrirás cómo estas tonalidades pueden transformar completamente la atmósfera de tu hogar. Además, compartimos ideas de combinación y sugerencias de materiales y texturas que puedes utilizar para realzar la decoración de cada espacio, logrando un estilo equilibrado y acogedor.',
-      imagen: 'build/img/blog2.jpg'
-    },
-    3: {
-      titulo: 'Cómo crear un jardín interior en casa',
-      fecha: '12/07/2024',
-      autor: 'Admin',
-      contenido:
-        'Aprende a diseñar y mantener un pequeño jardín en el interior de tu hogar, aprovechando la luz natural y las plantas adecuadas. Crear un jardín interior no solo mejora la estética de tu hogar, sino que también tiene beneficios para la salud, como la purificación del aire y la reducción del estrés. En este artículo, te explicamos cómo elegir las plantas correctas según la luz y la temperatura de tu espacio, y te damos recomendaciones sobre macetas, riego y cuidados específicos para mantener tu jardín en óptimas condiciones durante todo el año. ¡Dale vida a tu hogar con un toque natural!',
-      imagen: 'build/img/blog3.jpg'
-    },
-    4: {
-      titulo: 'Consejos para elegir los mejores muebles para tu sala',
-      fecha: '03/10/2024',
-      autor: 'Admin',
-      contenido:
-        'Encuentra los muebles ideales para tu sala de estar, teniendo en cuenta el tamaño, la funcionalidad y el estilo que mejor se adapta a tu espacio. Elegir los muebles adecuados para tu sala puede ser un desafío, pero con los consejos correctos, podrás crear un ambiente acogedor y funcional. Aquí te ayudamos a seleccionar piezas clave como sofás, mesas de centro y estanterías que no solo se adapten a tus necesidades, sino que también realcen la estética de tu hogar. Descubre cómo combinar diferentes estilos de muebles, desde lo moderno hasta lo clásico, y cómo aprovechar el espacio disponible para mantener un equilibrio entre funcionalidad y diseño.',
-      imagen: 'build/img/blog4.jpg'
-    }
-  };
-
-  const articulo = articulos[articuloId];
+  const articulo = articulos.find(art => art.id == articuloId);
 
   if (articulo) {
     document.getElementById('titulo-articulo').innerText = articulo.titulo;
     document.getElementById('fecha-articulo').innerText = articulo.fecha;
     document.getElementById('autor-articulo').innerText = articulo.autor;
     document.getElementById('contenido-articulo').innerText = articulo.contenido;
-    document.querySelector('.imagen img').src = articulo.imagen;
+    document.getElementById('imagen-articulo').src = articulo.imagen;
   }
 }
+
+/* EVENTOS AL CARGAR LA PÁGINA */
+document.addEventListener("DOMContentLoaded", function () {
+  eventListeners(), darkMode();
+  const isListaArticulos = document.querySelector("main.contenedor") && !window.location.pathname.includes("articulo.html");
+
+  if (isListaArticulos) {
+    // Si estamos en la página de lista de artículos
+    cargarArticulos();
+  } else if (window.location.pathname.includes("articulo.html")) {
+    // Si estamos en la página de detalle de artículo
+    cargarArticulo();
+  }
+});
 
