@@ -33,19 +33,13 @@ function toggleNavigation() {
   document.querySelector(".navegacion").classList.toggle("mostrar");
 }
 
-// /*TERMINA DE CARGAR LA PAGINA Y CARGA LAS FUNCIONES*/
-// document.addEventListener("DOMContentLoaded", function () {
-//   eventListeners(), darkMode();
-//   cargarArticulo();
-// });
-
 const articulos = [
   {
     id: 1,
     titulo: 'Ideas para organizar tu hogar en espacios pequeños',
     fecha: '10/02/2024',
     autor: 'Tanoni Matias',
-    contenido: 'Descubre cómo aprovechar cada rincón de tu casa...',
+    contenido: 'Descubre cómo aprovechar cada rincón de tu casa con ingeniosas soluciones de almacenamiento y diseño. Desde estanterías flotantes hasta muebles multifuncionales, aprende a maximizar el espacio sin sacrificar estilo. Con estas ideas, transformarás tu hogar en un lugar ordenado y acogedor, perfecto para vivir y recibir visitas.',
     imagen: 'build/img/blog1.jpg',
   },
   {
@@ -53,7 +47,7 @@ const articulos = [
     titulo: 'Colores que serán tendencia en 2024 para tu hogar',
     fecha: '25/03/2024',
     autor: 'Palopolo Lujan',
-    contenido: 'Te mostramos los colores que estarán en auge este año...',
+    contenido: 'Te mostramos los colores que estarán en auge este año y cómo puedes incorporarlos en la decoración de tu hogar. Desde tonos cálidos y acogedores hasta colores fríos que aportan serenidad, descubre cómo elegir la paleta adecuada para cada espacio. Aprende a combinar estos colores para crear ambientes armónicos y llenos de personalidad.',
     imagen: 'build/img/blog2.jpg',
   },
   {
@@ -61,7 +55,7 @@ const articulos = [
     titulo: 'Cómo crear un jardín interior en casa',
     fecha: '12/07/2024',
     autor: 'Smania Matias',
-    contenido: 'Aprende a diseñar y mantener un pequeño jardín...',
+    contenido: 'Aprende a diseñar y mantener un pequeño jardín en el interior de tu hogar. Te enseñaremos sobre las plantas más adecuadas para espacios reducidos, el cuidado que requieren y consejos para la disposición ideal. Desde jardines verticales hasta rincones verdes en tus habitaciones, transforma tu hogar en un oasis natural que te conecte con la naturaleza.',
     imagen: 'build/img/blog3.jpg',
   },
   {
@@ -69,10 +63,11 @@ const articulos = [
     titulo: 'Consejos para elegir los mejores muebles para tu sala',
     fecha: '03/10/2024',
     autor: 'Peña Enzo',
-    contenido: 'Encuentra los muebles ideales para tu sala de estar...',
+    contenido: 'Encuentra los muebles ideales para tu sala de estar con nuestros consejos prácticos. Descubre qué estilos se adaptan mejor a tu espacio y cómo seleccionar muebles que sean funcionales y estéticamente agradables. Además, te daremos tips sobre la distribución del mobiliario para optimizar el espacio y crear un ambiente acogedor para ti y tus invitados.',
     imagen: 'build/img/blog4.jpg',
   }
 ];
+
 
 /* CARGAR ARTÍCULOS EN LISTA */
 function cargarArticulos() {
@@ -91,7 +86,7 @@ function cargarArticulos() {
         </picture>
       </div>
       <div class="texto-entrada">
-        <a href="articulo.html?id=${articulo.id}" class="enlace-articulo" data-id="${articulo.id}">
+        <a class="enlace-articulo" data-id="${articulo.id}">
           <h4>${articulo.titulo}</h4>
           <p>Escrito el: <span>${articulo.fecha}</span> por: <span>${articulo.autor}</span></p>
           <p>${articulo.contenido}</p>
@@ -102,33 +97,16 @@ function cargarArticulos() {
   });
 }
 
-/* CARGAR DETALLES DEL ARTÍCULO */
-function cargarArticulo() {
-  const params = new URLSearchParams(window.location.search);
-  const articuloId = params.get('id');
 
-  const articulo = articulos.find(art => art.id == articuloId);
-
-  if (articulo) {
-    document.getElementById('titulo-articulo').innerText = articulo.titulo;
-    document.getElementById('fecha-articulo').innerText = articulo.fecha;
-    document.getElementById('autor-articulo').innerText = articulo.autor;
-    document.getElementById('contenido-articulo').innerText = articulo.contenido;
-    document.getElementById('imagen-articulo').src = articulo.imagen;
-  }
-}
 
 /* EVENTOS AL CARGAR LA PÁGINA */
 document.addEventListener("DOMContentLoaded", function () {
   eventListeners(), darkMode();
   const isListaArticulos = document.querySelector("main.contenedor") && !window.location.pathname.includes("articulo.html");
 
-  if (isListaArticulos) {
+  if (isListaArticulos && window.location.pathname.includes("blog.html")) {
     // Si estamos en la página de lista de artículos
     cargarArticulos();
-  } else if (window.location.pathname.includes("articulo.html")) {
-    // Si estamos en la página de detalle de artículo
-    cargarArticulo();
   }
 });
 
