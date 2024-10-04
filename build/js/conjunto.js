@@ -232,7 +232,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const isListaPropiedades = document.querySelector(".contenedor-anuncios") && window.location.pathname.includes("anuncios.html");
   const isListaArticulos = document.querySelector("main.contenedor") && !window.location.pathname.includes("articulo.html");
 
-  if (isListaArticulos && window.location.pathname.includes("blog.html")) {
+  if (isListaArticulos && (window.location.pathname.includes("blog.html"))) {
     // Si estamos en la página de lista de artículos
     cargarArticulos();
   }
