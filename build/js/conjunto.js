@@ -197,12 +197,27 @@ function cargarPropiedad() {
 
 
 /* CARGAR ARTÍCULOS EN LISTA */
-function cargarArticulos() {
-  const contenedor = document.querySelector("main.contenedor");
+function cargarArticulos(limite = articulos.length) {
+  const longitudMaximaDescripcion = 50; // Define la longitud máxima de la descripción
 
-  articulos.forEach(articulo => {
+  let contenedor;
+  const enIndex = window.location.pathname.includes("index.html");
+
+  if (window.location.pathname.includes("blog.html")) {
+    contenedor = document.querySelector("main.contenedor");
+  } else if (enIndex) {
+    contenedor = document.querySelector("section.contenedor");
+  }
+
+  // Usar slice para limitar la cantidad de artículos a cargar
+  articulos.slice(0, limite).forEach(articulo => {
     const article = document.createElement('article');
     article.classList.add('entrada-blog');
+
+    // Si estamos en index.html, resumir el texto; de lo contrario, usar el texto completo
+    const contenidoTexto = enIndex
+      ? resumirTexto(articulo.contenido, longitudMaximaDescripcion)
+      : articulo.contenido;
 
     article.innerHTML = `
       <div class="imagen">
@@ -216,13 +231,15 @@ function cargarArticulos() {
         <a class="enlace-articulo" data-id="${articulo.id}">
           <h4>${articulo.titulo}</h4>
           <p>Escrito el: <span>${articulo.fecha}</span> por: <span>${articulo.autor}</span></p>
-          <p>${articulo.contenido}</p>
+          <p>${contenidoTexto}</p>
         </a>
       </div>
     `;
+
     contenedor.appendChild(article);
   });
 }
+
 
 
 
@@ -230,11 +247,16 @@ function cargarArticulos() {
 document.addEventListener("DOMContentLoaded", function () {
   eventListeners(), darkMode();
   const isListaPropiedades = document.querySelector(".contenedor-anuncios") && window.location.pathname.includes("anuncios.html");
-  const isListaArticulos = document.querySelector("main.contenedor") && !window.location.pathname.includes("articulo.html");
+  // const isListaArticulos = document.querySelector("main.contenedor") && !window.location.pathname.includes("articulo.html");
 
-  if (isListaArticulos && (window.location.pathname.includes("blog.html"))) {
+  if ((window.location.pathname.includes("blog.html"))) {
+
     // Si estamos en la página de lista de artículos
     cargarArticulos();
+  } else if ((window.location.pathname.includes("index.html"))) {
+    console.log("hola");
+
+    cargarArticulos(2);
   }
 
   if (isListaPropiedades && window.location.pathname.includes("anuncios.html")) {
