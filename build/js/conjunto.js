@@ -134,11 +134,20 @@ function resumirTexto(texto, longitudMaxima) {
   return texto; // Retorna el texto completo si no supera la longitud máxima
 }
 
-function cargarPropiedades() {
-  const contenedor = document.querySelector(".contenedor-anuncios"); // Ajusta a tu contenedor específico
+function cargarPropiedades(limite = Object.keys(propiedades).length) {
+  let contenedor;
+  const enIndex = window.location.pathname.includes("index.html");
+
+  if (window.location.pathname.includes("anuncios.html")) {
+    contenedor = document.querySelector(".contenedor-anuncios");
+  } else if (enIndex) {
+    contenedor = document.querySelector(".contenedor-anuncios");
+  }
+
   const longitudMaximaDescripcion = 50; // Define la longitud máxima de la descripción
 
-  Object.keys(propiedades).forEach(key => {
+  // Usar slice para limitar la cantidad de propiedades a cargar
+  Object.keys(propiedades).slice(0, limite).forEach(key => {
     const propiedad = propiedades[key];
     const anuncio = document.createElement('div');
     anuncio.classList.add('anuncio');
@@ -151,7 +160,7 @@ function cargarPropiedades() {
       </picture>
       <div class="contenido-anuncios">
         <h3>${propiedad.titulo}</h3>
-        <p>${resumirTexto(propiedad.descripcion, longitudMaximaDescripcion)}</p> <!-- Resumir descripción -->
+        <p>${resumirTexto(propiedad.descripcion, longitudMaximaDescripcion)}</p>
         <p class="precio">${propiedad.precio}</p>
         <ul class="iconos-caracteristicas">
           <li>
@@ -170,9 +179,51 @@ function cargarPropiedades() {
         <a href="propiedad.html?id=${key}" class="boton-amarillo-block">Ver Propiedad</a>
       </div>
     `;
+
     contenedor.appendChild(anuncio);
   });
 }
+
+
+// function cargarPropiedades() {
+//   const contenedor = document.querySelector(".contenedor-anuncios"); // Ajusta a tu contenedor específico
+//   const longitudMaximaDescripcion = 50; // Define la longitud máxima de la descripción
+
+//   Object.keys(propiedades).forEach(key => {
+//     const propiedad = propiedades[key];
+//     const anuncio = document.createElement('div');
+//     anuncio.classList.add('anuncio');
+
+//     anuncio.innerHTML = `
+//       <picture>
+//         <source srcset="${propiedad.imagen.replace('.jpg', '.webp')}" type="image/webp" />
+//         <source srcset="${propiedad.imagen}" type="image/jpeg" />
+//         <img src="${propiedad.imagen}" alt="Imagen ${propiedad.titulo}" />
+//       </picture>
+//       <div class="contenido-anuncios">
+//         <h3>${propiedad.titulo}</h3>
+//         <p>${resumirTexto(propiedad.descripcion, longitudMaximaDescripcion)}</p> <!-- Resumir descripción -->
+//         <p class="precio">${propiedad.precio}</p>
+//         <ul class="iconos-caracteristicas">
+//           <li>
+//             <img class="icono" loading="lazy" src="build/img/icono_wc.svg" alt="icono_wc" />
+//             <p>${propiedad.sanitarios}</p>
+//           </li>
+//           <li>
+//             <img class="icono" loading="lazy" src="build/img/icono_estacionamiento.svg" alt="icono_estacionamiento" />
+//             <p>${propiedad.estacionamientos}</p>
+//           </li>
+//           <li>
+//             <img class="icono" loading="lazy" src="build/img/icono_dormitorio.svg" alt="icono_dormitorio" />
+//             <p>${propiedad.dormitorios}</p>
+//           </li>
+//         </ul>
+//         <a href="propiedad.html?id=${key}" class="boton-amarillo-block">Ver Propiedad</a>
+//       </div>
+//     `;
+//     contenedor.appendChild(anuncio);
+//   });
+// }
 
 // Función para cargar la propiedad seleccionada
 function cargarPropiedad() {
@@ -198,7 +249,7 @@ function cargarPropiedad() {
 
 /* CARGAR ARTÍCULOS EN LISTA */
 function cargarArticulos(limite = articulos.length) {
-  const longitudMaximaDescripcion = 50; // Define la longitud máxima de la descripción
+  const longitudMaximaDescripcion = 30; // Define la longitud máxima de la descripción
 
   let contenedor;
   const enIndex = window.location.pathname.includes("index.html");
@@ -250,13 +301,11 @@ document.addEventListener("DOMContentLoaded", function () {
   // const isListaArticulos = document.querySelector("main.contenedor") && !window.location.pathname.includes("articulo.html");
 
   if ((window.location.pathname.includes("blog.html"))) {
-
     // Si estamos en la página de lista de artículos
     cargarArticulos();
   } else if ((window.location.pathname.includes("index.html"))) {
-    console.log("hola");
-
     cargarArticulos(2);
+    cargarPropiedades(3);
   }
 
   if (isListaPropiedades && window.location.pathname.includes("anuncios.html")) {
