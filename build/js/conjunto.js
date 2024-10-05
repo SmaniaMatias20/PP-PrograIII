@@ -136,11 +136,11 @@ function resumirTexto(texto, longitudMaxima) {
 
 function cargarPropiedades(limite = Object.keys(propiedades).length) {
   let contenedor;
-  const enIndex = window.location.pathname.includes("index.html");
+  const enInicio = window.location.pathname.includes("inicio.html");
 
   if (window.location.pathname.includes("anuncios.html")) {
     contenedor = document.querySelector(".contenedor-anuncios");
-  } else if (enIndex) {
+  } else if (enInicio) {
     contenedor = document.querySelector(".contenedor-anuncios");
   }
 
@@ -184,47 +184,6 @@ function cargarPropiedades(limite = Object.keys(propiedades).length) {
   });
 }
 
-
-// function cargarPropiedades() {
-//   const contenedor = document.querySelector(".contenedor-anuncios"); // Ajusta a tu contenedor específico
-//   const longitudMaximaDescripcion = 50; // Define la longitud máxima de la descripción
-
-//   Object.keys(propiedades).forEach(key => {
-//     const propiedad = propiedades[key];
-//     const anuncio = document.createElement('div');
-//     anuncio.classList.add('anuncio');
-
-//     anuncio.innerHTML = `
-//       <picture>
-//         <source srcset="${propiedad.imagen.replace('.jpg', '.webp')}" type="image/webp" />
-//         <source srcset="${propiedad.imagen}" type="image/jpeg" />
-//         <img src="${propiedad.imagen}" alt="Imagen ${propiedad.titulo}" />
-//       </picture>
-//       <div class="contenido-anuncios">
-//         <h3>${propiedad.titulo}</h3>
-//         <p>${resumirTexto(propiedad.descripcion, longitudMaximaDescripcion)}</p> <!-- Resumir descripción -->
-//         <p class="precio">${propiedad.precio}</p>
-//         <ul class="iconos-caracteristicas">
-//           <li>
-//             <img class="icono" loading="lazy" src="build/img/icono_wc.svg" alt="icono_wc" />
-//             <p>${propiedad.sanitarios}</p>
-//           </li>
-//           <li>
-//             <img class="icono" loading="lazy" src="build/img/icono_estacionamiento.svg" alt="icono_estacionamiento" />
-//             <p>${propiedad.estacionamientos}</p>
-//           </li>
-//           <li>
-//             <img class="icono" loading="lazy" src="build/img/icono_dormitorio.svg" alt="icono_dormitorio" />
-//             <p>${propiedad.dormitorios}</p>
-//           </li>
-//         </ul>
-//         <a href="propiedad.html?id=${key}" class="boton-amarillo-block">Ver Propiedad</a>
-//       </div>
-//     `;
-//     contenedor.appendChild(anuncio);
-//   });
-// }
-
 // Función para cargar la propiedad seleccionada
 function cargarPropiedad() {
   const urlParams = new URLSearchParams(window.location.search);
@@ -252,11 +211,11 @@ function cargarArticulos(limite = articulos.length) {
   const longitudMaximaDescripcion = 30; // Define la longitud máxima de la descripción
 
   let contenedor;
-  const enIndex = window.location.pathname.includes("index.html");
+  const enInicio = window.location.pathname.includes("inicio.html");
 
   if (window.location.pathname.includes("blog.html")) {
     contenedor = document.querySelector("main.contenedor");
-  } else if (enIndex) {
+  } else if (enInicio) {
     contenedor = document.querySelector("section.contenedor");
   }
 
@@ -265,8 +224,8 @@ function cargarArticulos(limite = articulos.length) {
     const article = document.createElement('article');
     article.classList.add('entrada-blog');
 
-    // Si estamos en index.html, resumir el texto; de lo contrario, usar el texto completo
-    const contenidoTexto = enIndex
+    // Si estamos en inicio.html, resumir el texto; de lo contrario, usar el texto completo
+    const contenidoTexto = enInicio
       ? resumirTexto(articulo.contenido, longitudMaximaDescripcion)
       : articulo.contenido;
 
@@ -303,7 +262,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if ((window.location.pathname.includes("blog.html"))) {
     // Si estamos en la página de lista de artículos
     cargarArticulos();
-  } else if ((window.location.pathname.includes("index.html"))) {
+  } else if ((window.location.pathname.includes("inicio.html"))) {
     cargarArticulos(2);
     cargarPropiedades(3);
   }
