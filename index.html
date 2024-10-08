@@ -7,192 +7,74 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login y Registro</title>
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" />
-  <style>
-    :root {
-      --gris-oscuro: #2c3e50;
-      --verde: #27ae60;
-      --blanco: #ffffff;
-      --negro: #34495e;
-      --gris-claro: #ecf0f1;
-      --gris-medio: #bdc3c7;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Lato', sans-serif;
-      background-color: var(--gris-claro);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      color: var(--negro);
-      overflow: hidden;
-      /* Evita el desbordamiento del body */
-    }
-
-    .container {
-      max-width: 400px;
-      padding: 30px;
-      background: var(--blanco);
-      border-radius: 10px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-      overflow: hidden;
-      /* Asegura que el contenido no se desborde */
-      box-sizing: border-box;
-      /* Incluye el padding en el ancho total */
-    }
-
-    h2 {
-      font-weight: 300;
-      text-align: center;
-      margin-bottom: 20px;
-      font-size: 2rem;
-      /* Ajustado para mejor adaptación */
-      color: var(--gris-oscuro);
-    }
-
-    .form-group {
-      margin-bottom: 20px;
-    }
-
-    label {
-      display: block;
-      margin-bottom: 8px;
-      font-size: 1.1rem;
-      color: var(--gris-oscuro);
-    }
-
-    input[type="text"],
-    input[type="password"] {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid var(--gris-medio);
-      border-radius: 5px;
-      font-size: 1rem;
-      transition: border-color 0.3s, box-shadow 0.3s;
-      box-sizing: border-box;
-      /* Asegura que el padding no desborde el input */
-    }
-
-    input[type="text"]:focus,
-    input[type="password"]:focus {
-      border-color: var(--verde);
-      box-shadow: 0 0 5px rgba(39, 174, 96, 0.5);
-      outline: none;
-    }
-
-    button {
-      width: 100%;
-      padding: 12px;
-      background: var(--verde);
-      border: none;
-      color: var(--blanco);
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 1.2rem;
-      transition: background 0.3s, transform 0.2s;
-    }
-
-    button:hover {
-      background: darkgreen;
-      transform: translateY(-2px);
-    }
-
-    .toggle-link {
-      text-align: center;
-      margin-top: 15px;
-      font-size: 1rem;
-      color: var(--gris-oscuro);
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 420px) {
-      .container {
-        padding: 20px;
-        /* Reduce padding en pantallas más pequeñas */
-      }
-
-      h2 {
-        font-size: 1.8rem;
-        /* Ajuste de tamaño de fuente */
-      }
-
-      button {
-        font-size: 1rem;
-        /* Ajuste de tamaño de fuente en botones */
-      }
-
-      label,
-      input[type="text"],
-      input[type="password"] {
-        font-size: 0.9rem;
-        /* Ajuste de tamaño de fuente */
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="build/css/app.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" />
 </head>
 
 <body>
+
+
   <div class="container">
-    <h2 id="form-title">Iniciar Sesión</h2>
-    <form id="auth-form">
-      <div class="form-group">
-        <label for="username">Nombre de Usuario</label>
-        <input type="text" id="username" required />
+    <h2 id="titulo-formulario">Iniciar Sesión</h2>
+    <form id="formulario-autenticacion">
+      <div class="grupo-formulario">
+        <label for="nombre-usuario">Nombre de Usuario</label>
+        <input type="text" id="nombre-usuario" required />
       </div>
-      <div class="form-group">
-        <label for="password">Contraseña</label>
-        <input type="password" id="password" required />
+      <div class="grupo-formulario">
+        <label for="contraseña">Contraseña</label>
+        <input type="password" id="contraseña" required />
       </div>
-      <div id="confirm-password-group" class="form-group" style="display: none;">
-        <label for="confirm-password">Confirmar Contraseña</label>
-        <input type="password" id="confirm-password" />
+      <div id="grupo-confirmar-contraseña" class="grupo-formulario" style="display: none;">
+        <label for="confirmar-contraseña">Confirmar Contraseña</label>
+        <input type="password" id="confirmar-contraseña" />
       </div>
-      <button type="submit" id="submit-button">Iniciar Sesión</button>
+      <button type="submit" id="boton-enviar">Iniciar Sesión</button>
     </form>
-    <div class="toggle-link">
-      <span id="toggle-text">¿No tienes una cuenta? Regístrate</span>
+    <div class="enlace-toggle">
+      <span id="texto-toggle">¿No tienes una cuenta? Regístrate</span>
     </div>
   </div>
 
+
   <script>
-    const authForm = document.getElementById('auth-form');
-    const submitButton = document.getElementById('submit-button');
-    const toggleText = document.getElementById('toggle-text');
-    const confirmPasswordGroup = document.getElementById('confirm-password-group');
-    const formTitle = document.getElementById('form-title');
+    const formularioAutenticacion = document.getElementById('formulario-autenticacion');
+    const botonEnviar = document.getElementById('boton-enviar');
+    const textoToggle = document.getElementById('texto-toggle');
+    const grupoConfirmarContraseña = document.getElementById('grupo-confirmar-contraseña');
+    const tituloFormulario = document.getElementById('titulo-formulario');
 
-    let isRegistering = false;
+    let registrando = false;
 
-    toggleText.addEventListener('click', () => {
-      isRegistering = !isRegistering;
-      if (isRegistering) {
-        formTitle.textContent = 'Registrarse';
-        submitButton.textContent = 'Registrar';
-        confirmPasswordGroup.style.display = 'block';
-        toggleText.textContent = '¿Ya tienes una cuenta? Inicia Sesión';
+    textoToggle.addEventListener('click', () => {
+      registrando = !registrando;
+      if (registrando) {
+        tituloFormulario.textContent = 'Registrarse';
+        botonEnviar.textContent = 'Registrar';
+        grupoConfirmarContraseña.style.display = 'block';
+        textoToggle.textContent = '¿Ya tienes una cuenta? Inicia Sesión';
       } else {
-        formTitle.textContent = 'Iniciar Sesión';
-        submitButton.textContent = 'Iniciar Sesión';
-        confirmPasswordGroup.style.display = 'none';
-        toggleText.textContent = '¿No tienes una cuenta? Regístrate';
+        tituloFormulario.textContent = 'Iniciar Sesión';
+        botonEnviar.textContent = 'Iniciar Sesión';
+        grupoConfirmarContraseña.style.display = 'none';
+        textoToggle.textContent = '¿No tienes una cuenta? Regístrate';
       }
     });
 
-    authForm.addEventListener('submit', (e) => {
+    formularioAutenticacion.addEventListener('submit', (e) => {
       e.preventDefault();
-      const username = document.getElementById('username').value;
-      const password = document.getElementById('password').value;
+      const nombreUsuario = document.getElementById('nombre-usuario').value;
+      const contraseña = document.getElementById('contraseña').value;
 
-      if (isRegistering) {
-        const confirmPassword = document.getElementById('confirm-password').value;
-        if (password !== confirmPassword) {
+      if (registrando) {
+        const confirmarContraseña = document.getElementById('confirmar-contraseña').value;
+        if (contraseña !== confirmarContraseña) {
           alert('Las contraseñas no coinciden.');
           return;
         }
-        alert(`Registro exitoso para ${username}`);
+        alert(`Registro exitoso para ${nombreUsuario}`);
       } else {
-        alert(`Inicio de sesión exitoso para ${username}`);
+        alert(`Inicio de sesión exitoso para ${nombreUsuario}`);
       }
 
       // Redirigir a build/pages/inicio.html

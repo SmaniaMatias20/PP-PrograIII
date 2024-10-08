@@ -113,93 +113,11 @@ select {
   text-transform: none;
 }
 
-/* [type="button"],
-[type="reset"],
-[type="submit"],
-button {
-  -webkit-appearance: button;
-}
-
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner,
-button::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring,
-button:-moz-focusring {
-  outline: 1px dotted ButtonText;
-}
-
-fieldset {
-  padding: 0.35em 0.75em 0.625em;
-}
-
-legend {
-  box-sizing: border-box;
-  color: inherit;
-  display: table;
-  max-width: 100%;
-  padding: 0;
-  white-space: normal;
-}
-
-progress {
-  vertical-align: baseline;
-}
-
-textarea {
-  overflow: auto;
-}
-
-[type="checkbox"],
-[type="radio"] {
-  box-sizing: border-box;
-  padding: 0;
-}
-
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-  height: auto;
-}
-
-[type="search"] {
-  -webkit-appearance: textfield;
-  outline-offset: -2px;
-}
-
-[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  font: inherit;
-} */
-
-/* details {
-  display: block;
-}
-
-summary {
-  display: list-item;
-}
-
-[hidden],
-template {
-  display: none;
-} */
-
 *,
 :after,
 :before {
   box-sizing: inherit;
 }
-
 
 p {
   color: var(--negro);
@@ -300,7 +218,8 @@ h4 {
   background-color: var(--verde);
   border: none;
   color: var(--blanco);
-  display: inlane-block;
+  display: inline-block;
+  /* Corregido de 'inlane-block' */
   font-weight: 700;
   margin-top: 2.5rem;
   padding: 1rem 3rem;
@@ -465,10 +384,6 @@ h4 {
   padding-top: 3rem;
 }
 
-
-
-
-
 .navegacion {
   height: 0;
   opacity: 0;
@@ -477,8 +392,6 @@ h4 {
   visibility: hidden;
 }
 
-
-
 .navegacion a {
   color: var(--blanco);
   display: block;
@@ -486,7 +399,6 @@ h4 {
   text-align: center;
   text-decoration: none;
 }
-
 
 .mobile-menu img {
   width: 5rem;
@@ -581,8 +493,6 @@ h4 {
   color: var(--blanco);
   font-size: 1.8rem;
 }
-
-
 
 .entrada-blog {
   margin-bottom: 2rem;
@@ -694,6 +604,123 @@ h4 {
   margin: 0;
   width: auto;
 }
+
+/* Estilos para el formulario de inicio de sesión y registro */
+.formulario-login,
+.formulario-registro {
+  margin-top: 2rem;
+}
+
+.formulario-login h2,
+.formulario-registro h2 {
+  font-size: 2.4rem;
+  color: var(--gris-oscuro);
+  text-align: center;
+}
+
+.grupo-formulario {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--gris-oscuro);
+  border-radius: 5px;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: var(--verde);
+  outline: none;
+}
+
+
+/* Estilos para centrar y ajustar el formulario */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  /* Centra verticalmente */
+}
+
+#formulario-autenticacion {
+  max-width: 400px;
+  /* Ancho máximo del formulario */
+  width: 100%;
+  /* Para que ocupe el 100% del contenedor hasta el max-width */
+  padding: 2rem;
+  /* Espaciado interno */
+  background-color: var(--blanco);
+  /* Color de fondo */
+  border-radius: 1rem;
+  /* Bordes redondeados */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  /* Sombra suave */
+}
+
+/* Estilos para los grupos de formulario */
+.grupo-formulario {
+  margin-bottom: 15px;
+  /* Espaciado entre campos */
+}
+
+/* Estilo del botón */
+button[type="submit"] {
+  width: 100%;
+  /* Botón ocupa el ancho completo */
+  background-color: var(--gris-oscuro);
+  /* Color de fondo */
+  color: var(--blanco);
+  /* Color del texto */
+  padding: 1rem;
+  /* Espaciado interno */
+  border: none;
+  /* Sin borde */
+  border-radius: 1rem;
+  /* Bordes redondeados */
+  font-weight: bold;
+  /* Negrita */
+  cursor: pointer;
+  /* Cambia el cursor */
+  transition: background-color 0.3s;
+  /* Transición para el hover */
+}
+
+/* Estilo del botón en hover */
+button[type="submit"]:hover {
+  background-color: var(--naranja);
+  /* Color en hover */
+}
+
+/* Estilo para el texto del enlace toggle */
+.enlace-toggle {
+  margin-top: 1rem;
+  /* Espaciado superior */
+  font-size: 1.4rem;
+  /* Tamaño de fuente */
+  color: var(--gris-claro);
+  /* Color del texto */
+  cursor: pointer;
+  /* Cambia el cursor */
+}
+
+/* Estilo del texto toggle en hover */
+.enlace-toggle:hover {
+  color: var(--gris-oscuro);
+  /* Color en hover */
+}
+
 
 
 
