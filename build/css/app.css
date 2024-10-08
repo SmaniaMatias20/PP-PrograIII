@@ -665,8 +665,8 @@ input[type="password"]:focus {
   /* Color de fondo */
   border-radius: 1rem;
   /* Bordes redondeados */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  /* Sombra suave */
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+  /* Sombra más fuerte */
 }
 
 /* Estilos para los grupos de formulario */
