@@ -721,6 +721,28 @@ button[type="submit"]:hover {
   /* Color en hover */
 }
 
+#boton-logout {
+  background-color: var(--naranja);
+  /* Color de fondo */
+  color: var(--blanco);
+  /* Color del texto */
+  padding: 0.5rem 1rem;
+  /* Espaciado interno */
+  border-radius: 5px;
+  /* Bordes redondeados */
+  text-decoration: none;
+  /* Sin subrayado */
+  font-weight: bold;
+  /* Negrita */
+  transition: background-color 0.3s;
+  /* Transición para hover */
+}
+
+#boton-logout:hover {
+  background-color: var(--gris-oscuro);
+  /* Color en hover */
+}
+
 
 
 
