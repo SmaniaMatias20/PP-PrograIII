@@ -216,7 +216,6 @@ function cargarPropiedad() {
     document.getElementById("estacionamientos").textContent = propiedad.estacionamientos;
     document.getElementById("dormitorios").textContent = propiedad.dormitorios;
 
-    // Inicializar el mapa
     // Inicializar el mapa después de verificar que la API de Google Maps está cargada
     if (typeof google !== 'undefined' && google.maps) {
       initMap(propiedad.ubicacion);
