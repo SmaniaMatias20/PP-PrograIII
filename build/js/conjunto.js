@@ -32,14 +32,6 @@ const articulos = [
     contenido: 'Encuentra los muebles ideales para tu sala de estar con nuestros consejos prácticos. Descubre qué estilos se adaptan mejor a tu espacio y cómo seleccionar muebles que sean funcionales y estéticamente agradables.',
     imagen: '../img/blog4.jpg',
   },
-  {
-    id: 5,
-    titulo: 'Guía para decorar tu hogar con plantas',
-    fecha: '15/11/2024',
-    autor: 'Fernandez Carla',
-    contenido: 'Descubre cómo las plantas pueden transformar tu hogar. Desde elegir las adecuadas hasta consejos de cuidado, te mostramos cómo integrarlas en tu decoración para crear espacios frescos y acogedores.',
-    imagen: '../img/blog5.jpg',
-  },
 ];
 
 /* PROPIEDADES */
@@ -47,7 +39,7 @@ const propiedades = {
   1: {
     titulo: "Casa de lujo",
     imagen: "../img/anuncio1.jpg",
-    descripcion: "Descubre esta impresionante casa de lujo con vistas espectaculares al lago...",
+    descripcion: "Descubre esta impresionante casa de lujo con vistas espectaculares al lago. Con acabados de alta calidad y un diseño elegante, esta propiedad cuenta con amplios espacios interiores que incluyen una sala de estar luminosa, una cocina gourmet y un comedor ideal para recibir a tus invitados. Disfruta de tu propio oasis en el jardín, donde puedes relajarte junto a la piscina. Esta casa no solo ofrece confort, sino también una ubicación privilegiada cerca de restaurantes de alta gama y zonas recreativas.",
     precio: "$3,000,000",
     sanitarios: 3,
     estacionamientos: 5,
@@ -57,7 +49,7 @@ const propiedades = {
   2: {
     titulo: "Casa con balcón",
     imagen: "../img/anuncio2.jpg",
-    descripcion: "Vive en esta moderna casa que combina estilo y funcionalidad...",
+    descripcion: "Vive en esta moderna casa que combina estilo y funcionalidad. Con un encantador balcón que ofrece vistas a la ciudad, este hogar es perfecto para disfrutar de un café por la mañana o una cena al atardecer. La cocina está equipada con electrodomésticos de última generación y la sala de estar es un espacio acogedor para relajarte. Además, la ubicación en Recoleta te coloca a pasos de parques, boutiques y la vibrante vida cultural de Buenos Aires.",
     precio: "$2,000,000",
     sanitarios: 3,
     estacionamientos: 3,
@@ -67,7 +59,7 @@ const propiedades = {
   3: {
     titulo: "Casa de verano",
     imagen: "../img/anuncio3.jpg",
-    descripcion: "Esta moderna casa, con acceso privado a la playa...",
+    descripcion: "Esta moderna casa, con acceso privado a la playa, es el escape perfecto para tus vacaciones. Imagina despertar con el sonido de las olas y disfrutar de la brisa marina desde tu terraza. La casa cuenta con un diseño abierto que maximiza la luz natural, ideal para crear un ambiente cálido y acogedor. Con 3 dormitorios y un espacio exterior ideal para barbacoas, es el lugar perfecto para crear recuerdos inolvidables con amigos y familiares.",
     precio: "$4,500,000",
     sanitarios: 2,
     estacionamientos: 1,
@@ -77,7 +69,7 @@ const propiedades = {
   4: {
     titulo: "Casa moderna",
     imagen: "../img/anuncio4.jpg",
-    descripcion: "Sumérgete en la vida urbana con esta moderna casa...",
+    descripcion: "Sumérgete en la vida urbana con esta moderna casa, diseñada para quienes buscan la combinación perfecta entre confort y estilo contemporáneo. Con 5 dormitorios y amplios espacios de entretenimiento, esta propiedad es ideal para familias grandes. Disfruta de la cocina de diseño abierto que se conecta a la sala de estar y al comedor, facilitando la convivencia. Además, su ubicación en Puerto Madero te brinda acceso a restaurantes de alta calidad, parques y el río, convirtiéndola en una elección inmejorable.",
     precio: "$4,200,000",
     sanitarios: 4,
     estacionamientos: 2,
@@ -87,7 +79,7 @@ const propiedades = {
   5: {
     titulo: "Casa minimalista",
     imagen: "../img/anuncio5.jpg",
-    descripcion: "Disfruta de la tranquilidad en esta propiedad minimalista...",
+    descripcion: "Disfruta de la tranquilidad en esta propiedad minimalista, donde cada detalle ha sido cuidadosamente diseñado para ofrecer un ambiente sereno y funcional. Con amplias ventanas que permiten la entrada de luz natural, esta casa es perfecta para aquellos que valoran el diseño simple pero elegante. Los 3 dormitorios ofrecen suficiente espacio para la familia, mientras que el jardín te invita a relajarte y desconectar del bullicio urbano. Ubicada en Belgrano, disfrutarás de la cercanía a áreas verdes y servicios.",
     precio: "$3,800,000",
     sanitarios: 3,
     estacionamientos: 2,
@@ -97,7 +89,7 @@ const propiedades = {
   6: {
     titulo: "Casa con alberca",
     imagen: "../img/anuncio6.jpg",
-    descripcion: "Aprovecha esta excelente oportunidad de adquirir una casa con alberca...",
+    descripcion: "Aprovecha esta excelente oportunidad de adquirir una casa con alberca, perfecta para disfrutar de días soleados y momentos de relajación. La propiedad cuenta con un diseño moderno y abierto, con áreas sociales que invitan al entretenimiento. La cocina equipada se integra al comedor, creando un espacio ideal para cenas con amigos. Además, su ubicación en San Telmo te permite disfrutar de la rica cultura del barrio, con sus mercados, galerías de arte y restaurantes típicos.",
     precio: "$3,000,000",
     sanitarios: 3,
     estacionamientos: 3,
@@ -105,6 +97,7 @@ const propiedades = {
     ubicacion: { lat: -34.6132, lng: -58.3733 }, // San Telmo
   },
 };
+
 
 
 /* CALCULO DE AÑO DINAMICO */
@@ -153,14 +146,9 @@ function resumirTexto(texto, longitudMaxima) {
 
 /* CARGAR PROPIEDADES */
 function cargarPropiedades(limite = Object.keys(propiedades).length) {
-  let contenedor;
-  const enInicio = window.location.pathname.includes("inicio.html");
 
-  if (window.location.pathname.includes("anuncios.html")) {
-    contenedor = document.querySelector(".contenedor-anuncios");
-  } else if (enInicio) {
-    contenedor = document.querySelector(".contenedor-anuncios");
-  }
+  const contenedor = document.querySelector(".contenedor-anuncios");
+
 
   const longitudMaximaDescripcion = 50; // Longitud máxima de la descripción
 
