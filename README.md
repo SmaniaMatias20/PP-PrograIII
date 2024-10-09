@@ -1,7 +1,7 @@
 # Sitio Web de Bienes Raíces
 
 ## Descripción
-Este proyecto es una aplicación web dedicada al sector de bienes raíces. Permite a los usuarios buscar, explorar y obtener información sobre propiedades disponibles en el mercado. La aplicación ofrece funcionalidades como búsqueda avanzada, filtrado por precios, tipos de propiedades y ubicación. Además, utiliza la API de Google Maps para mostrar la ubicación de las propiedades en un mapa interactivo, facilitando así la navegación y la visualización de las ofertas.
+Este proyecto es una aplicación web dedicada al sector de bienes raíces. Permite a los usuarios buscar, explorar y obtener información sobre propiedades disponibles en el mercado. Además, utiliza la API de Google Maps para mostrar la ubicación de las propiedades en un mapa interactivo, facilitando así la navegación y la visualización de las ofertas.
 
 ### Características Principales
 - **Búsqueda de Propiedades**: Permite a los usuarios buscar propiedades mediante filtros.
