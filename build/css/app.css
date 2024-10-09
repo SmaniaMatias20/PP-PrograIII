@@ -293,7 +293,7 @@ h4 {
 }
 
 .header.inicio {
-  background-image: url(../src/header.webp);
+  background-image: url(../src/header.jpg);
   background-position: 50%;
   background-size: cover;
 }
@@ -474,7 +474,7 @@ h4 {
 }
 
 .imagen-contacto {
-  background-image: url(../src/encuentra.webp);
+  background-image: url(../src/encuentra.jpg);
   align-items: center;
   background-position: 50%;
   background-size: cover;
