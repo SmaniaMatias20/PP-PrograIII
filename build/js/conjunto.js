@@ -6,7 +6,7 @@ const articulos = [
     fecha: '10/02/2024',
     autor: 'Tanoni Matias',
     contenido: 'Descubre cómo aprovechar cada rincón de tu casa con ingeniosas soluciones de almacenamiento y diseño. Desde estanterías flotantes hasta muebles multifuncionales, aprende a maximizar el espacio sin sacrificar estilo.',
-    imagen: '../img/blog1.jpg',
+    imagen: '../src/articulos/blog1.jpg',
   },
   {
     id: 2,
@@ -14,7 +14,7 @@ const articulos = [
     fecha: '25/03/2024',
     autor: 'Palopolo Lujan',
     contenido: 'Te mostramos los colores que estarán en auge este año y cómo puedes incorporarlos en la decoración de tu hogar. Desde tonos cálidos y acogedores hasta colores fríos que aportan serenidad, descubre cómo elegir la paleta adecuada para cada espacio.',
-    imagen: '../img/blog2.jpg',
+    imagen: '../src/articulos/blog2.jpg',
   },
   {
     id: 3,
@@ -22,7 +22,7 @@ const articulos = [
     fecha: '12/07/2024',
     autor: 'Smania Matias',
     contenido: 'Aprende a diseñar y mantener un pequeño jardín en el interior de tu hogar. Te enseñaremos sobre las plantas más adecuadas para espacios reducidos, el cuidado que requieren y consejos para la disposición ideal.',
-    imagen: '../img/blog3.jpg',
+    imagen: '../src/articulos/blog3.jpg',
   },
   {
     id: 4,
@@ -30,7 +30,7 @@ const articulos = [
     fecha: '03/10/2024',
     autor: 'Peña Enzo',
     contenido: 'Encuentra los muebles ideales para tu sala de estar con nuestros consejos prácticos. Descubre qué estilos se adaptan mejor a tu espacio y cómo seleccionar muebles que sean funcionales y estéticamente agradables.',
-    imagen: '../img/blog4.jpg',
+    imagen: '../src/articulos/blog4.jpg',
   },
 ];
 
@@ -38,7 +38,7 @@ const articulos = [
 const propiedades = {
   1: {
     titulo: "Casa de lujo",
-    imagen: "../img/anuncio1.jpg",
+    imagen: "../src/anuncios/anuncio1.jpg",
     descripcion: "Descubre esta impresionante casa de lujo con vistas espectaculares al lago. Con acabados de alta calidad y un diseño elegante, esta propiedad cuenta con amplios espacios interiores que incluyen una sala de estar luminosa, una cocina gourmet y un comedor ideal para recibir a tus invitados. Disfruta de tu propio oasis en el jardín, donde puedes relajarte junto a la piscina. Esta casa no solo ofrece confort, sino también una ubicación privilegiada cerca de restaurantes de alta gama y zonas recreativas.",
     precio: "$3,000,000",
     sanitarios: 3,
@@ -48,7 +48,7 @@ const propiedades = {
   },
   2: {
     titulo: "Casa con balcón",
-    imagen: "../img/anuncio2.jpg",
+    imagen: "../src/anuncios/anuncio2.jpg",
     descripcion: "Vive en esta moderna casa que combina estilo y funcionalidad. Con un encantador balcón que ofrece vistas a la ciudad, este hogar es perfecto para disfrutar de un café por la mañana o una cena al atardecer. La cocina está equipada con electrodomésticos de última generación y la sala de estar es un espacio acogedor para relajarte. Además, la ubicación en Recoleta te coloca a pasos de parques, boutiques y la vibrante vida cultural de Buenos Aires.",
     precio: "$2,000,000",
     sanitarios: 3,
@@ -58,7 +58,7 @@ const propiedades = {
   },
   3: {
     titulo: "Casa de verano",
-    imagen: "../img/anuncio3.jpg",
+    imagen: "../src/anuncios/anuncio3.jpg",
     descripcion: "Esta moderna casa, con acceso privado a la playa, es el escape perfecto para tus vacaciones. Imagina despertar con el sonido de las olas y disfrutar de la brisa marina desde tu terraza. La casa cuenta con un diseño abierto que maximiza la luz natural, ideal para crear un ambiente cálido y acogedor. Con 3 dormitorios y un espacio exterior ideal para barbacoas, es el lugar perfecto para crear recuerdos inolvidables con amigos y familiares.",
     precio: "$4,500,000",
     sanitarios: 2,
@@ -68,7 +68,7 @@ const propiedades = {
   },
   4: {
     titulo: "Casa moderna",
-    imagen: "../img/anuncio4.jpg",
+    imagen: "../src/anuncios/anuncio4.jpg",
     descripcion: "Sumérgete en la vida urbana con esta moderna casa, diseñada para quienes buscan la combinación perfecta entre confort y estilo contemporáneo. Con 5 dormitorios y amplios espacios de entretenimiento, esta propiedad es ideal para familias grandes. Disfruta de la cocina de diseño abierto que se conecta a la sala de estar y al comedor, facilitando la convivencia. Además, su ubicación en Puerto Madero te brinda acceso a restaurantes de alta calidad, parques y el río, convirtiéndola en una elección inmejorable.",
     precio: "$4,200,000",
     sanitarios: 4,
@@ -78,7 +78,7 @@ const propiedades = {
   },
   5: {
     titulo: "Casa minimalista",
-    imagen: "../img/anuncio5.jpg",
+    imagen: "../src/anuncios/anuncio5.jpg",
     descripcion: "Disfruta de la tranquilidad en esta propiedad minimalista, donde cada detalle ha sido cuidadosamente diseñado para ofrecer un ambiente sereno y funcional. Con amplias ventanas que permiten la entrada de luz natural, esta casa es perfecta para aquellos que valoran el diseño simple pero elegante. Los 3 dormitorios ofrecen suficiente espacio para la familia, mientras que el jardín te invita a relajarte y desconectar del bullicio urbano. Ubicada en Belgrano, disfrutarás de la cercanía a áreas verdes y servicios.",
     precio: "$3,800,000",
     sanitarios: 3,
@@ -88,7 +88,7 @@ const propiedades = {
   },
   6: {
     titulo: "Casa con alberca",
-    imagen: "../img/anuncio6.jpg",
+    imagen: "../src/anuncios/anuncio6.jpg",
     descripcion: "Aprovecha esta excelente oportunidad de adquirir una casa con alberca, perfecta para disfrutar de días soleados y momentos de relajación. La propiedad cuenta con un diseño moderno y abierto, con áreas sociales que invitan al entretenimiento. La cocina equipada se integra al comedor, creando un espacio ideal para cenas con amigos. Además, su ubicación en San Telmo te permite disfrutar de la rica cultura del barrio, con sus mercados, galerías de arte y restaurantes típicos.",
     precio: "$3,000,000",
     sanitarios: 3,
@@ -159,7 +159,6 @@ function cargarPropiedades(limite = Object.keys(propiedades).length) {
 
     anuncio.innerHTML = `
       <picture>
-        <source srcset="${propiedad.imagen.replace('.jpg', '.webp')}" type="image/webp" />
         <source srcset="${propiedad.imagen}" type="image/jpeg" />
         <img src="${propiedad.imagen}" alt="Imagen ${propiedad.titulo}" />
       </picture>
@@ -169,15 +168,15 @@ function cargarPropiedades(limite = Object.keys(propiedades).length) {
         <p class="precio">${propiedad.precio}</p>
         <ul class="iconos-caracteristicas">
           <li>
-            <img class="icono" loading="lazy" src="../img/icono_wc.svg" alt="icono_wc" />
+            <img class="icono" loading="lazy" src="../src/icono_wc.svg" alt="icono_wc" />
             <p>${propiedad.sanitarios}</p>
           </li>
           <li>
-            <img class="icono" loading="lazy" src="../img/icono_estacionamiento.svg" alt="icono_estacionamiento" />
+            <img class="icono" loading="lazy" src="../src/icono_estacionamiento.svg" alt="icono_estacionamiento" />
             <p>${propiedad.estacionamientos}</p>
           </li>
           <li>
-            <img class="icono" loading="lazy" src="../img/icono_dormitorio.svg" alt="icono_dormitorio" />
+            <img class="icono" loading="lazy" src="../src/icono_dormitorio.svg" alt="icono_dormitorio" />
             <p>${propiedad.dormitorios}</p>
           </li>
         </ul>
@@ -262,7 +261,6 @@ function cargarArticulos(limite = articulos.length) {
     article.innerHTML = `
       <div class="imagen">
         <picture>
-          <source srcset="${articulo.imagen.replace('.jpg', '.webp')}" type="image/webp" />
           <source srcset="${articulo.imagen}" type="image/jpeg" />
           <img loading="lazy" src="${articulo.imagen}" alt="Imagen Blog ${articulo.id}" />
         </picture>

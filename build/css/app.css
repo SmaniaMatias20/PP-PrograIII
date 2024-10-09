@@ -293,7 +293,7 @@ h4 {
 }
 
 .header.inicio {
-  background-image: url(../img/header.webp);
+  background-image: url(../src/header.webp);
   background-position: 50%;
   background-size: cover;
 }
@@ -474,7 +474,7 @@ h4 {
 }
 
 .imagen-contacto {
-  background-image: url(../img/encuentra.webp);
+  background-image: url(../src/encuentra.webp);
   align-items: center;
   background-position: 50%;
   background-size: cover;
@@ -545,7 +545,7 @@ h4 {
 }
 
 .testimonial blockquote:before {
-  background-image: url(../img/comilla.svg);
+  background-image: url(../src/comilla.svg);
   background-repeat: no-repeat;
   content: "";
   display: block;
