@@ -168,15 +168,15 @@ function cargarPropiedades(limite = Object.keys(propiedades).length) {
         <p class="precio">${propiedad.precio}</p>
         <ul class="iconos-caracteristicas">
           <li>
-            <img class="icono" loading="lazy" src="../src/icono_wc.svg" alt="icono_wc" />
+            <img class="icono" loading="lazy" src="../src/iconos/icono_wc.svg" alt="icono_wc" />
             <p>${propiedad.sanitarios}</p>
           </li>
           <li>
-            <img class="icono" loading="lazy" src="../src/icono_estacionamiento.svg" alt="icono_estacionamiento" />
+            <img class="icono" loading="lazy" src="../src/iconos/icono_estacionamiento.svg" alt="icono_estacionamiento" />
             <p>${propiedad.estacionamientos}</p>
           </li>
           <li>
-            <img class="icono" loading="lazy" src="../src/icono_dormitorio.svg" alt="icono_dormitorio" />
+            <img class="icono" loading="lazy" src="../src/iconos/icono_dormitorio.svg" alt="icono_dormitorio" />
             <p>${propiedad.dormitorios}</p>
           </li>
         </ul>
