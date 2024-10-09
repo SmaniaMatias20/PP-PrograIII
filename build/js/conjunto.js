@@ -62,7 +62,7 @@ const propiedades = {
     sanitarios: 3,
     estacionamientos: 3,
     dormitorios: 4,
-    ubicacion: { lat: -34.5943, lng: -58.3879 }, // Buenos Aires, Argentina
+    ubicacion: { lat: -34.5889, lng: -58.3962 }, // Recoleta
   },
   3: {
     titulo: "Casa de verano",
@@ -72,7 +72,7 @@ const propiedades = {
     sanitarios: 2,
     estacionamientos: 1,
     dormitorios: 3,
-    ubicacion: { lat: -37.1002, lng: -56.3704 }, // Punta del Este, Uruguay
+    ubicacion: { lat: -34.5880, lng: -58.4072 }, // Palermo
   },
   4: {
     titulo: "Casa moderna",
@@ -82,7 +82,7 @@ const propiedades = {
     sanitarios: 4,
     estacionamientos: 2,
     dormitorios: 5,
-    ubicacion: { lat: -34.9040, lng: -56.2058 }, // Montevideo, Uruguay
+    ubicacion: { lat: -34.6170, lng: -58.3643 }, // Puerto Madero
   },
   5: {
     titulo: "Casa minimalista",
@@ -92,7 +92,7 @@ const propiedades = {
     sanitarios: 3,
     estacionamientos: 2,
     dormitorios: 3,
-    ubicacion: { lat: -34.9032, lng: -57.8560 }, // Córdoba, Argentina
+    ubicacion: { lat: -34.5733, lng: -58.4391 }, // Belgrano
   },
   6: {
     titulo: "Casa con alberca",
@@ -102,7 +102,7 @@ const propiedades = {
     sanitarios: 3,
     estacionamientos: 3,
     dormitorios: 4,
-    ubicacion: { lat: -34.8350, lng: -58.5732 }, // La Plata, Argentina
+    ubicacion: { lat: -34.6132, lng: -58.3733 }, // San Telmo
   },
 };
 
@@ -239,7 +239,7 @@ function cargarPropiedad() {
 function initMap(ubicacion) {
 
   const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 10,
+    zoom: 15,
     center: ubicacion,
   });
 
