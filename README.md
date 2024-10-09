@@ -26,12 +26,15 @@ Este proyecto es una aplicación web dedicada al sector de bienes raíces. Permi
   - Google Maps API: Para integrar funcionalidades de mapas y geolocalización.
  
 ## Imágenes
-Aquí puedes ver una captura de pantalla de las secciones del sitio web:
-
+### Inicio
 ![Inicio](https://github.com/SmaniaMatias20/PP-PrograIII/blob/matias/build/img/readme/inicio.png)
+### Nosotros
 ![Nosotros](https://github.com/SmaniaMatias20/PP-PrograIII/blob/matias/build/img/readme/nosotros.png)
+### Anuncios
 ![Anuncios](https://github.com/SmaniaMatias20/PP-PrograIII/blob/matias/build/img/readme/anuncios.png)
+### Blog
 ![Blog](https://github.com/SmaniaMatias20/PP-PrograIII/blob/matias/build/img/readme/blog.png)
+### Contacto
 ![Contacto](https://github.com/SmaniaMatias20/PP-PrograIII/blob/matias/build/img/readme/contacto.png)
 
 
