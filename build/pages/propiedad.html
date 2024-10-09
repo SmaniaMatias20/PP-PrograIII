@@ -8,6 +8,8 @@
   <title>Detalles de la propiedad</title>
   <link rel="stylesheet" href="../css/app.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" />
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeKD6IkV9e6voCTtvGi4Iv1ox67HdXOd4&callback=initMap"
+    async defer></script>
 </head>
 
 <body>
@@ -20,7 +22,6 @@
         <div class="mobile-menu">
           <img src="../img/barras.svg" alt="Icono menu responsive" />
         </div>
-
         <div class="derecha">
           <img class="dark-mode-boton" src="../img/dark-mode.svg" alt="Icono darkmode" />
           <nav class="navegacion">
@@ -29,11 +30,10 @@
             <a href="anuncios.html">Anuncios</a>
             <a href="blog.html">Blog</a>
             <a href="contacto.html">Contacto</a>
-            <a href="../../index.html" id="boton-logout">Logout</a> <!-- Botón de Logout -->
+            <a href="../../index.html" id="boton-logout">Logout</a>
           </nav>
         </div>
       </div>
-      <!--Barra-->
     </div>
   </header>
 
@@ -57,6 +57,9 @@
         <p id="dormitorios" class="font-weight-bold"></p>
       </li>
     </ul>
+
+    <!-- Contenedor del mapa -->
+    <div id="map" style="height: 400px; width: 100%; margin-top: 20px;"></div>
   </main>
 
   <footer class="footer seccion">

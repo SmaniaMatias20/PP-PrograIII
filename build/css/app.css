@@ -743,10 +743,6 @@ button[type="submit"]:hover {
   /* Color en hover */
 }
 
-
-
-
-
 @media (min-width: 768px) {
   .derecha {
     align-items: flex-end;

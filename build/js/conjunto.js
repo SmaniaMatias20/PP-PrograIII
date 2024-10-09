@@ -1,9 +1,118 @@
-/*CALCULO DE AÑO DINAMICO*/
+/* ARTÍCULOS */
+const articulos = [
+  {
+    id: 1,
+    titulo: 'Ideas para organizar tu hogar en espacios pequeños',
+    fecha: '10/02/2024',
+    autor: 'Tanoni Matias',
+    contenido: 'Descubre cómo aprovechar cada rincón de tu casa con ingeniosas soluciones de almacenamiento y diseño. Desde estanterías flotantes hasta muebles multifuncionales, aprende a maximizar el espacio sin sacrificar estilo.',
+    imagen: '../img/blog1.jpg',
+  },
+  {
+    id: 2,
+    titulo: 'Colores que serán tendencia en 2024 para tu hogar',
+    fecha: '25/03/2024',
+    autor: 'Palopolo Lujan',
+    contenido: 'Te mostramos los colores que estarán en auge este año y cómo puedes incorporarlos en la decoración de tu hogar. Desde tonos cálidos y acogedores hasta colores fríos que aportan serenidad, descubre cómo elegir la paleta adecuada para cada espacio.',
+    imagen: '../img/blog2.jpg',
+  },
+  {
+    id: 3,
+    titulo: 'Cómo crear un jardín interior en casa',
+    fecha: '12/07/2024',
+    autor: 'Smania Matias',
+    contenido: 'Aprende a diseñar y mantener un pequeño jardín en el interior de tu hogar. Te enseñaremos sobre las plantas más adecuadas para espacios reducidos, el cuidado que requieren y consejos para la disposición ideal.',
+    imagen: '../img/blog3.jpg',
+  },
+  {
+    id: 4,
+    titulo: 'Consejos para elegir los mejores muebles para tu sala',
+    fecha: '03/10/2024',
+    autor: 'Peña Enzo',
+    contenido: 'Encuentra los muebles ideales para tu sala de estar con nuestros consejos prácticos. Descubre qué estilos se adaptan mejor a tu espacio y cómo seleccionar muebles que sean funcionales y estéticamente agradables.',
+    imagen: '../img/blog4.jpg',
+  },
+  {
+    id: 5,
+    titulo: 'Guía para decorar tu hogar con plantas',
+    fecha: '15/11/2024',
+    autor: 'Fernandez Carla',
+    contenido: 'Descubre cómo las plantas pueden transformar tu hogar. Desde elegir las adecuadas hasta consejos de cuidado, te mostramos cómo integrarlas en tu decoración para crear espacios frescos y acogedores.',
+    imagen: '../img/blog5.jpg',
+  },
+];
+
+/* PROPIEDADES */
+const propiedades = {
+  1: {
+    titulo: "Casa de lujo",
+    imagen: "../img/anuncio1.jpg",
+    descripcion: "Descubre esta impresionante casa de lujo con vistas espectaculares al lago...",
+    precio: "$3,000,000",
+    sanitarios: 3,
+    estacionamientos: 5,
+    dormitorios: 4,
+    ubicacion: { lat: -34.6083, lng: -58.3732 }, // Buenos Aires, Argentina
+  },
+  2: {
+    titulo: "Casa con balcón",
+    imagen: "../img/anuncio2.jpg",
+    descripcion: "Vive en esta moderna casa que combina estilo y funcionalidad...",
+    precio: "$2,000,000",
+    sanitarios: 3,
+    estacionamientos: 3,
+    dormitorios: 4,
+    ubicacion: { lat: -34.5943, lng: -58.3879 }, // Buenos Aires, Argentina
+  },
+  3: {
+    titulo: "Casa de verano",
+    imagen: "../img/anuncio3.jpg",
+    descripcion: "Esta moderna casa, con acceso privado a la playa...",
+    precio: "$4,500,000",
+    sanitarios: 2,
+    estacionamientos: 1,
+    dormitorios: 3,
+    ubicacion: { lat: -37.1002, lng: -56.3704 }, // Punta del Este, Uruguay
+  },
+  4: {
+    titulo: "Casa moderna",
+    imagen: "../img/anuncio4.jpg",
+    descripcion: "Sumérgete en la vida urbana con esta moderna casa...",
+    precio: "$4,200,000",
+    sanitarios: 4,
+    estacionamientos: 2,
+    dormitorios: 5,
+    ubicacion: { lat: -34.9040, lng: -56.2058 }, // Montevideo, Uruguay
+  },
+  5: {
+    titulo: "Casa minimalista",
+    imagen: "../img/anuncio5.jpg",
+    descripcion: "Disfruta de la tranquilidad en esta propiedad minimalista...",
+    precio: "$3,800,000",
+    sanitarios: 3,
+    estacionamientos: 2,
+    dormitorios: 3,
+    ubicacion: { lat: -34.9032, lng: -57.8560 }, // Córdoba, Argentina
+  },
+  6: {
+    titulo: "Casa con alberca",
+    imagen: "../img/anuncio6.jpg",
+    descripcion: "Aprovecha esta excelente oportunidad de adquirir una casa con alberca...",
+    precio: "$3,000,000",
+    sanitarios: 3,
+    estacionamientos: 3,
+    dormitorios: 4,
+    ubicacion: { lat: -34.8350, lng: -58.5732 }, // La Plata, Argentina
+  },
+};
+
+
+/* CALCULO DE AÑO DINAMICO */
 var yearElement = document.getElementById("year");
 var currentYear = new Date().getFullYear();
 yearElement.textContent = currentYear;
 
-/*MODO OSCURITO*/
+/* MODO OSCURITO */
 function darkMode() {
   const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
   prefersDarkScheme.matches
@@ -21,119 +130,28 @@ function darkMode() {
   });
 }
 
-/*MENU MOBILLLLE*/
+/* MENU MOVIL */
 function eventListeners() {
   document
     .querySelector(".mobile-menu")
     .addEventListener("click", toggleNavigation);
 }
 
-/*MOSTRAR NAVEGACION*/
+/* MOSTRAR NAVEGACION */
 function toggleNavigation() {
   document.querySelector(".navegacion").classList.toggle("mostrar");
 }
 
-const articulos = [
-  {
-    id: 1,
-    titulo: 'Ideas para organizar tu hogar en espacios pequeños',
-    fecha: '10/02/2024',
-    autor: 'Tanoni Matias',
-    contenido: 'Descubre cómo aprovechar cada rincón de tu casa con ingeniosas soluciones de almacenamiento y diseño. Desde estanterías flotantes hasta muebles multifuncionales, aprende a maximizar el espacio sin sacrificar estilo. Con estas ideas, transformarás tu hogar en un lugar ordenado y acogedor, perfecto para vivir y recibir visitas.',
-    imagen: '../img/blog1.jpg',
-  },
-  {
-    id: 2,
-    titulo: 'Colores que serán tendencia en 2024 para tu hogar',
-    fecha: '25/03/2024',
-    autor: 'Palopolo Lujan',
-    contenido: 'Te mostramos los colores que estarán en auge este año y cómo puedes incorporarlos en la decoración de tu hogar. Desde tonos cálidos y acogedores hasta colores fríos que aportan serenidad, descubre cómo elegir la paleta adecuada para cada espacio. Aprende a combinar estos colores para crear ambientes armónicos y llenos de personalidad.',
-    imagen: '../img/blog2.jpg',
-  },
-  {
-    id: 3,
-    titulo: 'Cómo crear un jardín interior en casa',
-    fecha: '12/07/2024',
-    autor: 'Smania Matias',
-    contenido: 'Aprende a diseñar y mantener un pequeño jardín en el interior de tu hogar. Te enseñaremos sobre las plantas más adecuadas para espacios reducidos, el cuidado que requieren y consejos para la disposición ideal. Desde jardines verticales hasta rincones verdes en tus habitaciones, transforma tu hogar en un oasis natural que te conecte con la naturaleza.',
-    imagen: '../img/blog3.jpg',
-  },
-  {
-    id: 4,
-    titulo: 'Consejos para elegir los mejores muebles para tu sala',
-    fecha: '03/10/2024',
-    autor: 'Peña Enzo',
-    contenido: 'Encuentra los muebles ideales para tu sala de estar con nuestros consejos prácticos. Descubre qué estilos se adaptan mejor a tu espacio y cómo seleccionar muebles que sean funcionales y estéticamente agradables. Además, te daremos tips sobre la distribución del mobiliario para optimizar el espacio y crear un ambiente acogedor para ti y tus invitados.',
-    imagen: '../img/blog4.jpg',
-  }
-];
-
-// Simulando datos de propiedades
-const propiedades = {
-  1: {
-    titulo: "Casa de lujo",
-    imagen: "../img/anuncio1.jpg",
-    descripcion: "Descubre esta impresionante casa de lujo con vistas espectaculares al lago. Esta propiedad destaca por sus acabados de alta calidad, que incluyen mármol en los pisos y madera noble en las puertas. La amplia sala de estar se abre a un espacioso patio, ideal para entretenerse, donde podrás disfrutar de atardeceres inolvidables. La cocina, equipada con electrodomésticos de última generación, es un sueño para cualquier chef. Con cuatro dormitorios, cada uno con su propio baño, esta casa es perfecta para familias que buscan comodidad y elegancia en un solo lugar. Su ubicación privilegiada, rodeada de naturaleza, ofrece la tranquilidad que necesitas.",
-    precio: "$3,000,000",
-    sanitarios: 3,
-    estacionamientos: 5,
-    dormitorios: 4,
-  },
-  2: {
-    titulo: "Casa con balcón",
-    imagen: "../img/anuncio2.jpg",
-    descripcion: "Vive en esta moderna casa que combina estilo y funcionalidad. Equipado con tecnología inteligente y completamente amueblado, este hogar ofrece un ambiente acogedor desde el momento en que entras. Los grandes ventanales permiten la entrada de luz natural y ofrecen vistas panorámicas del jardín, que está diseñado con paisajismo profesional. La sala de estar, amplia y luminosa, es perfecta para reuniones familiares, mientras que la cocina gourmet, con una isla central y electrodomésticos de acero inoxidable, invita a la creatividad culinaria. Disfruta de la comodidad de tres dormitorios, cada uno con armarios empotrados y acabados de lujo. Esta casa es el espacio perfecto para disfrutar de la comodidad y el lujo en cada rincón.",
-    precio: "$2,000,000",
-    sanitarios: 3,
-    estacionamientos: 3,
-    dormitorios: 4,
-  },
-  3: {
-    titulo: "Casa de verano",
-    imagen: "../img/anuncio3.jpg",
-    descripcion: "Esta moderna casa, con acceso privado a la playa, es el refugio perfecto para disfrutar de días soleados y la brisa marina. Su diseño elegante combina líneas limpias y espacios abiertos, creando un ambiente relajante. Con tres dormitorios, cada uno decorado con un estilo costero, la casa puede alojar cómodamente a toda la familia. El área al aire libre incluye una terraza espaciosa y una piscina, ideal para refrescarse después de un día en la playa. La cocina, equipada con electrodomésticos de última generación, se conecta a la sala de estar, donde podrás disfrutar de momentos inolvidables con amigos y familiares. Cada rincón de esta casa está diseñado para brindar confort y una conexión con la belleza natural que la rodea.",
-    precio: "$4,500,000",
-    sanitarios: 2,
-    estacionamientos: 1,
-    dormitorios: 3,
-  },
-  4: {
-    titulo: "Casa moderna ",
-    imagen: "../img/anuncio4.jpg",
-    descripcion: "Sumérgete en la vida urbana con esta moderna casa que cuenta con un diseño contemporáneo y tecnología de domótica. Esta propiedad no solo ofrece un estilo de vida lujoso, sino que también proporciona comodidad con su sistema inteligente que controla la iluminación, la temperatura y la seguridad desde tu smartphone. El amplio jardín es un oasis en medio de la ciudad, ideal para disfrutar de barbacoas y momentos de relajación. Con cinco dormitorios, esta casa es perfecta para familias grandes o aquellos que buscan espacio adicional para oficinas o habitaciones de invitados. La cocina de concepto abierto se integra con la sala de estar, creando un ambiente perfecto para socializar y disfrutar de la vida moderna.",
-    precio: "$4,200,000",
-    sanitarios: 4,
-    estacionamientos: 2,
-    dormitorios: 5,
-  },
-  5: {
-    titulo: "Casa minimalista ",
-    imagen: "../img/anuncio5.jpg",
-    descripcion: "Disfruta de la tranquilidad en esta propiedad minimalista con vistas al lago. Con un diseño arquitectónico limpio y contemporáneo, esta casa está diseñada para maximizar el espacio y la luz natural. Los acabados en tonos neutros y materiales naturales crean un ambiente sereno que invita a la relajación. La casa cuenta con tres dormitorios, perfectos para descansar después de un día explorando la naturaleza. La cocina está equipada con electrodomésticos de alta gama y una barra desayunadora, ideal para comidas informales. Además, la sala de estar se abre a un patio, donde podrás disfrutar de la paz que brinda la vista al lago y la belleza del entorno natural.",
-    precio: "$3,800,000",
-    sanitarios: 3,
-    estacionamientos: 2,
-    dormitorios: 3,
-  },
-  6: {
-    titulo: "Casa con alberca",
-    imagen: "../img/anuncio6.jpg",
-    descripcion: "Aprovecha esta excelente oportunidad de adquirir una casa con alberca y acabados de lujo en la ciudad. La piscina es el lugar perfecto para disfrutar de momentos memorables con amigos y familiares en un entorno cómodo y sofisticado. Esta casa cuenta con un diseño abierto que permite que la luz natural fluya por todos los espacios. Con cuatro dormitorios, cada uno con armarios empotrados y ventanales, esta propiedad ofrece tanto comodidad como estilo. La cocina de concepto abierto está conectada a la sala de estar y al comedor, haciendo de este un espacio ideal para la vida cotidiana y el entretenimiento. Además, su ubicación te brinda fácil acceso a los principales servicios y atracciones de la ciudad.",
-    precio: "$3,000,000",
-    sanitarios: 3,
-    estacionamientos: 3,
-    dormitorios: 4,
-  },
-};
 
 
+/* RESUMIR TEXTO */
 function resumirTexto(texto, longitudMaxima) {
-  if (texto.length > longitudMaxima) {
-    return texto.substring(0, longitudMaxima) + '...'; // Agrega puntos suspensivos
-  }
-  return texto; // Retorna el texto completo si no supera la longitud máxima
+  return texto.length > longitudMaxima
+    ? texto.substring(0, longitudMaxima) + '...'
+    : texto;
 }
 
+/* CARGAR PROPIEDADES */
 function cargarPropiedades(limite = Object.keys(propiedades).length) {
   let contenedor;
   const enInicio = window.location.pathname.includes("inicio.html");
@@ -144,9 +162,8 @@ function cargarPropiedades(limite = Object.keys(propiedades).length) {
     contenedor = document.querySelector(".contenedor-anuncios");
   }
 
-  const longitudMaximaDescripcion = 50; // Define la longitud máxima de la descripción
+  const longitudMaximaDescripcion = 50; // Longitud máxima de la descripción
 
-  // Usar slice para limitar la cantidad de propiedades a cargar
   Object.keys(propiedades).slice(0, limite).forEach(key => {
     const propiedad = propiedades[key];
     const anuncio = document.createElement('div');
@@ -184,7 +201,7 @@ function cargarPropiedades(limite = Object.keys(propiedades).length) {
   });
 }
 
-// Función para cargar la propiedad seleccionada
+/* CARGAR PROPIEDAD SELECCIONADA */
 function cargarPropiedad() {
   const urlParams = new URLSearchParams(window.location.search);
   const id = urlParams.get("id");
@@ -198,6 +215,20 @@ function cargarPropiedad() {
     document.getElementById("sanitarios").textContent = propiedad.sanitarios;
     document.getElementById("estacionamientos").textContent = propiedad.estacionamientos;
     document.getElementById("dormitorios").textContent = propiedad.dormitorios;
+
+    // Inicializar el mapa
+    // Inicializar el mapa después de verificar que la API de Google Maps está cargada
+    if (typeof google !== 'undefined' && google.maps) {
+      initMap(propiedad.ubicacion);
+    } else {
+      // Esperar hasta que la API se cargue
+      const checkGoogleMaps = setInterval(() => {
+        if (typeof google !== 'undefined' && google.maps) {
+          clearInterval(checkGoogleMaps);
+          initMap(propiedad.ubicacion);
+        }
+      }, 100); // Comprobar cada 100 ms
+    }
   } else {
     document.body.innerHTML = "<h1 class='text-center'>Propiedad no encontrada</h1>";
   }
@@ -205,10 +236,24 @@ function cargarPropiedad() {
 
 
 
+/* INICIALIZAR MAPA */
+function initMap(ubicacion) {
+
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 10,
+    center: ubicacion,
+  });
+
+  new google.maps.Marker({
+    position: ubicacion,
+    map: map,
+    title: "Propiedad",
+  });
+}
 
 /* CARGAR ARTÍCULOS EN LISTA */
 function cargarArticulos(limite = articulos.length) {
-  const longitudMaximaDescripcion = 30; // Define la longitud máxima de la descripción
+  const longitudMaximaDescripcion = 30; // Longitud máxima de la descripción
 
   let contenedor;
   const enInicio = window.location.pathname.includes("inicio.html");
@@ -219,12 +264,10 @@ function cargarArticulos(limite = articulos.length) {
     contenedor = document.querySelector("section.contenedor");
   }
 
-  // Usar slice para limitar la cantidad de artículos a cargar
   articulos.slice(0, limite).forEach(articulo => {
     const article = document.createElement('article');
     article.classList.add('entrada-blog');
 
-    // Si estamos en inicio.html, resumir el texto; de lo contrario, usar el texto completo
     const contenidoTexto = enInicio
       ? resumirTexto(articulo.contenido, longitudMaximaDescripcion)
       : articulo.contenido;
@@ -250,28 +293,23 @@ function cargarArticulos(limite = articulos.length) {
   });
 }
 
-
-
-
 /* EVENTOS AL CARGAR LA PÁGINA */
 document.addEventListener("DOMContentLoaded", function () {
-  eventListeners(), darkMode();
+  eventListeners();
+  darkMode();
   const isListaPropiedades = document.querySelector(".contenedor-anuncios") && window.location.pathname.includes("anuncios.html");
-  // const isListaArticulos = document.querySelector("main.contenedor") && !window.location.pathname.includes("articulo.html");
 
-  if ((window.location.pathname.includes("blog.html"))) {
-    // Si estamos en la página de lista de artículos
+  if (window.location.pathname.includes("blog.html")) {
     cargarArticulos();
-  } else if ((window.location.pathname.includes("inicio.html"))) {
+  } else if (window.location.pathname.includes("inicio.html")) {
     cargarArticulos(2);
     cargarPropiedades(3);
   }
 
   if (isListaPropiedades && window.location.pathname.includes("anuncios.html")) {
-    // Si estamos en la página de lista de propiedades
     cargarPropiedades();
   } else if (window.location.pathname.includes("propiedad.html")) {
     cargarPropiedad();
   }
-
 });
+
