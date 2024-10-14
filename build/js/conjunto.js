@@ -1,3 +1,5 @@
+//#region CONSTANTES
+
 /* ARTÍCULOS */
 const articulos = [
   {
@@ -98,7 +100,7 @@ const propiedades = {
   },
 };
 
-
+//#endregion
 
 /* CALCULO DE AÑO DINAMICO */
 var yearElement = document.getElementById("year");
@@ -298,5 +300,24 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+//#region FAVORITOS Y CONSTANTES
 
+/*Favoritos*/
+document.querySelectorAll('.eliminar-favorito').forEach(boton => {
+  boton.addEventListener('click', function () {
+    const id = this.getAttribute('data-id');
+    this.parentElement.remove();
+    alert('Eliminado de favoritos');
+  });
+});
 
+/*Promociones*/
+document.querySelectorAll('.generar-cupon').forEach(boton => {
+  boton.addEventListener('click', function () {
+    const cupon = 'CUPON-' + Math.random().toString(36).substr(2, 8).toUpperCase();
+    this.nextElementSibling.textContent = 'Tu código de cupón: ' + cupon;
+    alert('Cupón generado: ' + cupon);
+  });
+});
+
+//#endregion
