@@ -11,13 +11,12 @@
 </head>
 
 <body>
-  <header class="header inicio">
+  <header class="header">
     <div class="contenedor contenido-header">
       <div class="barra">
         <a href="inicio.html">
           <img src="../src/logo.svg" alt="Logotipo de Bienes Raices" />
         </a>
-
         <div class="mobile-menu">
           <img src="../src/barras.svg" alt="Icono menu responsive" />
         </div>
@@ -36,76 +35,25 @@
           </nav>
         </div>
       </div>
-      <h1>Ventas de Casas y Departamentos Exclusivos de Lujo</h1>
+      <!--Barra-->
     </div>
   </header>
 
-  <main class="contenedor seccion">
-    <h1>Más sobre nosotros</h1>
-    <div class="icono-nosotros">
-      <div class="icono">
-        <img src="../src/iconos/icono1.svg" alt="Icono Seguridad" loading="lazy" />
-        <h3>Seguridad</h3>
-        <p>
-          Garantizamos transacciones seguras y confiables en cada operación
-          inmobiliaria. Nuestro equipo trabaja con la mayor transparencia para
-          que compres o vendas tu propiedad con total confianza.
-        </p>
+  <section class="contenedor seccion">
+    <h2 class="titulo-seccion">Mis Favoritos</h2>
+    <div class="lista-favoritos">
+      <!-- Favoritos -->
+      <div class="favorito-item">
+        <p>Casa en Palermo - 3 Dormitorios</p>
+        <button class="boton-rojo eliminar-favorito" data-id="1">Eliminar de Favoritos</button>
       </div>
-      <div class="icono">
-        <img src="../src/iconos/icono2.svg" alt="Icono Precio" loading="lazy" />
-        <h3>Precio</h3>
-        <p>
-          Ofrecemos una excelente relación calidad-precio en todas nuestras
-          propiedades. Te asesoramos para que encuentres la mejor opción de
-          acuerdo a tu presupuesto y necesidades.
-        </p>
+      <div class="favorito-item">
+        <p>Departamento en Recoleta - 2 Dormitorios</p>
+        <button class="boton-rojo eliminar-favorito" data-id="2">Eliminar de Favoritos</button>
       </div>
-      <div class="icono">
-        <img src="../src/iconos/icono3.svg" alt="Icono Tiempo" loading="lazy" />
-        <h3>A Tiempo</h3>
-        <p>
-          Sabemos que tu tiempo es valioso. Nos comprometemos a cumplir con
-          los plazos establecidos para que tu proceso de compra o venta sea
-          eficiente y sin complicaciones.
-        </p>
-      </div>
+      <!-- Aquí se agregarán más favoritos dinámicamente -->
     </div>
-
-    <div class="contenedor-anuncios" id="property-list">
-      <!-- Anuncios -->
-    </div>
-
-  </main>
-
-  <section class="imagen-contacto">
-    <div class="overlay"></div>
-    <h2>Encuentra la casa de tus sueños</h2>
-    <p>
-      Llena el formulario de contacto y un asesor se pondrá en contacto
-      contigo a la brevedad
-    </p>
-    <a href="contacto.html" class="boton-amarillo-inline">Contáctanos</a>
   </section>
-
-  <div class="contenedor seccion seccion-inferior">
-    <section class="contenedor seccion contenido-centrado">
-      <a href="blog.html">
-        <h1>Nuestro Blog</h1>
-      </a>
-      <div id="articulos"></div>
-    </section>
-    <section class="testimoniales">
-      <h3>Testimoniales</h3>
-      <div class="testimonial">
-        <blockquote>
-          El personal se comportó de una excelente forma, muy buena atención y
-          la casa que me ofrecieron cumple con todas mis expectativas.
-        </blockquote>
-        <p>- Enzo E. Peña</p>
-      </div>
-    </section>
-  </div>
 
   <footer class="footer seccion">
     <div class="contenedor contenedor-footer">
@@ -135,22 +83,11 @@
       <p id="copyright" class="copyright">
         @Todos los derechos reservados <span id="year">&copy;</span>
       </p>
-      
+
     </div>
   </footer>
 
   <script src="../js/conjunto.js"></script>
 </body>
-</body>
-
-  </body>
 
 </html>
-
-
-
-
-
-
-
-  
