@@ -1,5 +1,84 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900");
 
+
+/* Estilo general para el carrusel */
+.carousel {
+  position: relative;
+  margin-bottom: 30px;
+  /* Espacio inferior para separación */
+}
+
+/* Estilo de las imágenes en el carrusel */
+.carousel-inner img {
+  width: 100%;
+  /* Asegura que las imágenes ocupen todo el ancho */
+  height: 450px;
+  /* Ajusta la altura como desees */
+  object-fit: cover;
+  /* Mantiene la proporción de las imágenes */
+  border-radius: 8px;
+  /* Bordes redondeados para un aspecto más suave */
+}
+
+/* Estilo de los indicadores */
+.carousel-indicators button {
+  background-color: rgba(255, 255, 255, 0.7);
+  /* Color blanco con algo de transparencia */
+  border-radius: 50%;
+  /* Bordes redondeados */
+  width: 12px;
+  /* Ancho de los botones */
+  height: 12px;
+  /* Altura de los botones */
+}
+
+/* Estilo del indicador activo */
+.carousel-indicators .active {
+  background-color: #007bff;
+  /* Color azul para el indicador activo */
+}
+
+/* Estilo de los controles de navegación */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Fondo oscuro para los controles */
+  border-radius: 50%;
+  /* Bordes redondeados */
+  padding: 10px;
+  /* Espaciado alrededor del icono */
+}
+
+/* Estilo de los iconos de control */
+.carousel-control-prev-icon::after,
+.carousel-control-next-icon::after {
+  font-size: 20px;
+  /* Tamaño del icono */
+  color: white;
+  /* Color del icono */
+}
+
+/* Espacio inferior en el carrusel */
+.mb-4 {
+  margin-bottom: 1.5rem !important;
+  /* Margen inferior */
+}
+
+/* Mejoras de accesibilidad para el texto de los controles */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+
+
+
 :root {
   --gris-oscuro: #3498db;
   --verde: #71b100;
@@ -12,6 +91,7 @@
 }
 
 html {
+
   -webkit-text-size-adjust: 100%;
   line-height: 1.15;
   box-sizing: border-box;
