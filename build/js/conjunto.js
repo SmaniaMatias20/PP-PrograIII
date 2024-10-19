@@ -332,7 +332,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /*Favoritos*/
 document.querySelectorAll('.eliminar-favorito').forEach(boton => {
-  boton.addEventListener('click', function() {
+  boton.addEventListener('click', function () {
     const id = this.getAttribute('data-id');
     this.parentElement.remove();
     alert('Eliminado de favoritos');
@@ -341,7 +341,7 @@ document.querySelectorAll('.eliminar-favorito').forEach(boton => {
 
 /*Promociones*/
 document.querySelectorAll('.generar-cupon').forEach(boton => {
-  boton.addEventListener('click', function() {
+  boton.addEventListener('click', function () {
     const cupon = 'CUPON-' + Math.random().toString(36).substr(2, 8).toUpperCase();
     this.nextElementSibling.textContent = 'Tu código de cupón: ' + cupon;
     alert('Cupón generado: ' + cupon);
