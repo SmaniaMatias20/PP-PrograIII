@@ -18,7 +18,7 @@ document.getElementById('loginForm').addEventListener('submit', function (event)
         message.style.color = 'green';
         message.textContent = 'Inicio de sesión exitoso';
         // Aquí puedes redirigir a otra página
-        window.location.href = 'build/pages/inicio.html'; // Descomenta para redirigir
+        window.location.href = 'build/pages/inicio.html';
     } else {
         message.style.color = 'red';
         message.textContent = 'Usuario o contraseña incorrectos';
