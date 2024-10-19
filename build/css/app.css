@@ -1,84 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900");
 
-
-/* Estilo general para el carrusel */
-.carousel {
-  position: relative;
-  margin-bottom: 30px;
-  /* Espacio inferior para separación */
-}
-
-/* Estilo de las imágenes en el carrusel */
-.carousel-inner img {
-  width: 100%;
-  /* Asegura que las imágenes ocupen todo el ancho */
-  height: 450px;
-  /* Ajusta la altura como desees */
-  object-fit: cover;
-  /* Mantiene la proporción de las imágenes */
-  border-radius: 8px;
-  /* Bordes redondeados para un aspecto más suave */
-}
-
-/* Estilo de los indicadores */
-.carousel-indicators button {
-  background-color: rgba(255, 255, 255, 0.7);
-  /* Color blanco con algo de transparencia */
-  border-radius: 50%;
-  /* Bordes redondeados */
-  width: 12px;
-  /* Ancho de los botones */
-  height: 12px;
-  /* Altura de los botones */
-}
-
-/* Estilo del indicador activo */
-.carousel-indicators .active {
-  background-color: #007bff;
-  /* Color azul para el indicador activo */
-}
-
-/* Estilo de los controles de navegación */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-color: rgba(0, 0, 0, 0.5);
-  /* Fondo oscuro para los controles */
-  border-radius: 50%;
-  /* Bordes redondeados */
-  padding: 10px;
-  /* Espaciado alrededor del icono */
-}
-
-/* Estilo de los iconos de control */
-.carousel-control-prev-icon::after,
-.carousel-control-next-icon::after {
-  font-size: 20px;
-  /* Tamaño del icono */
-  color: white;
-  /* Color del icono */
-}
-
-/* Espacio inferior en el carrusel */
-.mb-4 {
-  margin-bottom: 1.5rem !important;
-  /* Margen inferior */
-}
-
-/* Mejoras de accesibilidad para el texto de los controles */
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-}
-
-
-
-
 :root {
   --gris-oscuro: #3498db;
   --verde: #71b100;
@@ -685,123 +606,25 @@ h4 {
   width: auto;
 }
 
-/* Estilos para el formulario de inicio de sesión y registro */
-.formulario-login,
-.formulario-registro {
-  margin-top: 2rem;
-}
-
-.formulario-login h2,
-.formulario-registro h2 {
-  font-size: 2.4rem;
-  color: var(--gris-oscuro);
-  text-align: center;
-}
-
-.grupo-formulario {
-  margin-bottom: 15px;
-}
-
-label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: 700;
-}
-
-input[type="text"],
-input[type="password"] {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid var(--gris-oscuro);
-  border-radius: 5px;
-  transition: border-color 0.3s;
-}
-
-input[type="text"]:focus,
-input[type="password"]:focus {
-  border-color: var(--verde);
-  outline: none;
-}
-
-
-/* Estilos para centrar y ajustar el formulario */
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   height: 100vh;
-  /* Centra verticalmente */
 }
 
-#formulario-autenticacion {
-  max-width: 400px;
-  /* Ancho máximo del formulario */
-  width: 100%;
-  /* Para que ocupe el 100% del contenedor hasta el max-width */
-  padding: 2rem;
-  /* Espaciado interno */
-  background-color: var(--blanco);
-  /* Color de fondo */
-  border-radius: 1rem;
-  /* Bordes redondeados */
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
-  /* Sombra más fuerte */
-}
-
-/* Estilos para los grupos de formulario */
-.grupo-formulario {
-  margin-bottom: 15px;
-  /* Espaciado entre campos */
-}
-
-/* Estilo del botón */
-button[type="submit"] {
-  width: 100%;
-  /* Botón ocupa el ancho completo */
-  background-color: var(--gris-oscuro);
-  /* Color de fondo */
-  color: var(--blanco);
-  /* Color del texto */
-  padding: 1rem;
-  /* Espaciado interno */
-  border: none;
-  /* Sin borde */
-  border-radius: 1rem;
-  /* Bordes redondeados */
-  font-weight: bold;
-  /* Negrita */
-  cursor: pointer;
-  /* Cambia el cursor */
-  transition: background-color 0.3s;
-  /* Transición para el hover */
-}
-
-/* Estilo del botón en hover */
-button[type="submit"]:hover {
-  background-color: var(--naranja);
-  /* Color en hover */
-}
-
-/* Estilo para el texto del enlace toggle */
 .enlace-toggle {
   margin-top: 1rem;
-  /* Espaciado superior */
   font-size: 1.4rem;
-  /* Tamaño de fuente */
   color: var(--gris-claro);
-  /* Color del texto */
   cursor: pointer;
-  /* Cambia el cursor */
 }
 
-/* Estilo del texto toggle en hover */
 .enlace-toggle:hover {
   color: var(--gris-oscuro);
-  /* Color en hover */
 }
 
-/*favoritos*/
 .favorito-item {
   display: flex;
   justify-content: space-between;
@@ -811,9 +634,11 @@ button[type="submit"]:hover {
   margin-bottom: 10px;
   border-radius: 5px;
 }
+
 .favorito-item p {
   margin: 0;
 }
+
 .boton-rojo {
   background-color: #ff4d4d;
   color: white;
@@ -822,6 +647,7 @@ button[type="submit"]:hover {
   border-radius: 5px;
   cursor: pointer;
 }
+
 .boton-rojo:hover {
   background-color: #ff3333;
 }
@@ -833,6 +659,7 @@ button[type="submit"]:hover {
   margin-bottom: 10px;
   border-radius: 5px;
 }
+
 .boton-amarillo {
   background-color: #ffdd57;
   color: black;
@@ -841,9 +668,11 @@ button[type="submit"]:hover {
   border-radius: 5px;
   cursor: pointer;
 }
+
 .boton-amarillo:hover {
   background-color: #ffcc33;
 }
+
 .codigo-cupon {
   margin-top: 10px;
   font-weight: bold;
@@ -852,24 +681,69 @@ button[type="submit"]:hover {
 
 #boton-logout {
   background-color: var(--naranja);
-  /* Color de fondo */
   color: var(--blanco);
-  /* Color del texto */
   padding: 0.5rem 1rem;
-  /* Espaciado interno */
   border-radius: 5px;
-  /* Bordes redondeados */
   text-decoration: none;
-  /* Sin subrayado */
   font-weight: bold;
-  /* Negrita */
   transition: background-color 0.3s;
-  /* Transición para hover */
 }
 
 #boton-logout:hover {
   background-color: var(--gris-oscuro);
-  /* Color en hover */
+}
+
+.carousel {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+
+.carousel-inner img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+
+.carousel-indicators button {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+}
+
+.carousel-indicators .active {
+  background-color: #007bff;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.carousel-control-prev-icon::after,
+.carousel-control-next-icon::after {
+  font-size: 20px;
+  color: white;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem !important;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 
 @media (min-width: 768px) {

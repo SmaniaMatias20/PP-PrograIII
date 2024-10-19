@@ -1,5 +1,6 @@
 //#region CONSTANTES
 
+
 /* ARTÍCULOS */
 const articulos = [
   {
