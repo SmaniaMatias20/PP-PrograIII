@@ -39,75 +39,110 @@ const articulos = [
 /* PROPIEDADES */
 const propiedades = {
   1: {
-    titulo: "Casa de lujo",
-    imagen: "../src/anuncios/anuncio1.jpg",
-    descripcion: "Descubre esta impresionante casa de lujo con vistas espectaculares al lago. Con acabados de alta calidad y un diseño elegante, esta propiedad cuenta con amplios espacios interiores que incluyen una sala de estar luminosa, una cocina gourmet y un comedor ideal para recibir a tus invitados. Disfruta de tu propio oasis en el jardín, donde puedes relajarte junto a la piscina. Esta casa no solo ofrece confort, sino también una ubicación privilegiada cerca de restaurantes de alta gama y zonas recreativas.",
+    titulo: "Casa del Lago",
+    imagen: "../src/anuncios/anuncio1/propiedad.jpg",
+    imagenesInterior: [
+      "../src/anuncios/anuncio1/cocina.jpg",
+      "../src/anuncios/anuncio1/baño.jpg",
+      "../src/anuncios/anuncio1/dormitorio.jpg"
+    ],
+    descripcion: "Descubre esta impresionante casa de lujo con vistas espectaculares al lago...",
     precio: "$3,000,000",
     sanitarios: 3,
     estacionamientos: 5,
     dormitorios: 4,
-    ubicacion: { lat: -34.6083, lng: -58.3732 }, // Buenos Aires, Argentina
+    ubicacion: { lat: -34.6083, lng: -58.3732 },
   },
   2: {
-    titulo: "Casa con balcón",
-    imagen: "../src/anuncios/anuncio2.jpg",
-    descripcion: "Vive en esta moderna casa que combina estilo y funcionalidad. Con un encantador balcón que ofrece vistas a la ciudad, este hogar es perfecto para disfrutar de un café por la mañana o una cena al atardecer. La cocina está equipada con electrodomésticos de última generación y la sala de estar es un espacio acogedor para relajarte. Además, la ubicación en Recoleta te coloca a pasos de parques, boutiques y la vibrante vida cultural de Buenos Aires.",
+    titulo: "Balcón Soñado",
+    imagen: "../src/anuncios/anuncio2/propiedad.jpg",
+    imagenesInterior: [
+      "../src/anuncios/anuncio2/cocina.jpg",
+      "../src/anuncios/anuncio2/baño.jpg",
+      "../src/anuncios/anuncio2/dormitorio.jpg"
+    ],
+    descripcion: "Vive en esta moderna casa que combina estilo y funcionalidad...",
     precio: "$2,000,000",
     sanitarios: 3,
     estacionamientos: 3,
     dormitorios: 4,
-    ubicacion: { lat: -34.5889, lng: -58.3962 }, // Recoleta
+    ubicacion: { lat: -34.5889, lng: -58.3962 },
   },
   3: {
     titulo: "Casa de verano",
-    imagen: "../src/anuncios/anuncio3.jpg",
-    descripcion: "Esta moderna casa, con acceso privado a la playa, es el escape perfecto para tus vacaciones. Imagina despertar con el sonido de las olas y disfrutar de la brisa marina desde tu terraza. La casa cuenta con un diseño abierto que maximiza la luz natural, ideal para crear un ambiente cálido y acogedor. Con 3 dormitorios y un espacio exterior ideal para barbacoas, es el lugar perfecto para crear recuerdos inolvidables con amigos y familiares.",
+    imagen: "../src/anuncios/anuncio3/propiedad.jpg",
+    imagenesInterior: [
+      "../src/anuncios/anuncio3/cocina.jpg",
+      "../src/anuncios/anuncio3/baño.jpg",
+      "../src/anuncios/anuncio3/dormitorio.jpg"
+    ],
+    descripcion: "Esta moderna casa, con acceso privado a la playa...",
     precio: "$4,500,000",
     sanitarios: 2,
     estacionamientos: 1,
     dormitorios: 3,
-    ubicacion: { lat: -34.5880, lng: -58.4072 }, // Palermo
+    ubicacion: { lat: -34.5880, lng: -58.4072 },
   },
   4: {
     titulo: "Casa moderna",
-    imagen: "../src/anuncios/anuncio4.jpg",
-    descripcion: "Sumérgete en la vida urbana con esta moderna casa, diseñada para quienes buscan la combinación perfecta entre confort y estilo contemporáneo. Con 5 dormitorios y amplios espacios de entretenimiento, esta propiedad es ideal para familias grandes. Disfruta de la cocina de diseño abierto que se conecta a la sala de estar y al comedor, facilitando la convivencia. Además, su ubicación en Puerto Madero te brinda acceso a restaurantes de alta calidad, parques y el río, convirtiéndola en una elección inmejorable.",
+    imagen: "../src/anuncios/anuncio4/propiedad.jpg",
+    imagenesInterior: [
+      "../src/anuncios/anuncio4/cocina.jpg",
+      "../src/anuncios/anuncio4/baño.jpg",
+      "../src/anuncios/anuncio4/dormitorio.jpg"
+    ],
+    descripcion: "Sumérgete en la vida urbana con esta moderna casa...",
     precio: "$4,200,000",
     sanitarios: 4,
     estacionamientos: 2,
     dormitorios: 5,
-    ubicacion: { lat: -34.6170, lng: -58.3643 }, // Puerto Madero
+    ubicacion: { lat: -34.6170, lng: -58.3643 },
   },
   5: {
     titulo: "Casa minimalista",
-    imagen: "../src/anuncios/anuncio5.jpg",
-    descripcion: "Disfruta de la tranquilidad en esta propiedad minimalista, donde cada detalle ha sido cuidadosamente diseñado para ofrecer un ambiente sereno y funcional. Con amplias ventanas que permiten la entrada de luz natural, esta casa es perfecta para aquellos que valoran el diseño simple pero elegante. Los 3 dormitorios ofrecen suficiente espacio para la familia, mientras que el jardín te invita a relajarte y desconectar del bullicio urbano. Ubicada en Belgrano, disfrutarás de la cercanía a áreas verdes y servicios.",
+    imagen: "../src/anuncios/anuncio5/propiedad.jpg",
+    imagenesInterior: [
+      "../src/anuncios/anuncio5/cocina.jpg",
+      "../src/anuncios/anuncio5/baño.jpg",
+      "../src/anuncios/anuncio5/dormitorio.jpg"
+    ],
+    descripcion: "Disfruta de la tranquilidad en esta propiedad minimalista...",
     precio: "$3,800,000",
     sanitarios: 3,
     estacionamientos: 2,
     dormitorios: 3,
-    ubicacion: { lat: -34.5733, lng: -58.4391 }, // Belgrano
+    ubicacion: { lat: -34.5733, lng: -58.4391 },
   },
   6: {
     titulo: "Casa con alberca",
-    imagen: "../src/anuncios/anuncio6.jpg",
-    descripcion: "Aprovecha esta excelente oportunidad de adquirir una casa con alberca, perfecta para disfrutar de días soleados y momentos de relajación. La propiedad cuenta con un diseño moderno y abierto, con áreas sociales que invitan al entretenimiento. La cocina equipada se integra al comedor, creando un espacio ideal para cenas con amigos. Además, su ubicación en San Telmo te permite disfrutar de la rica cultura del barrio, con sus mercados, galerías de arte y restaurantes típicos.",
+    imagen: "../src/anuncios/anuncio6/propiedad.jpg",
+    imagenesInterior: [
+      "../src/anuncios/anuncio6/cocina.jpg",
+      "../src/anuncios/anuncio6/baño.jpg",
+      "../src/anuncios/anuncio6/dormitorio.jpg"
+    ],
+    descripcion: "Aprovecha esta excelente oportunidad de adquirir una casa con alberca...",
     precio: "$3,000,000",
     sanitarios: 3,
     estacionamientos: 3,
     dormitorios: 4,
-    ubicacion: { lat: -34.6132, lng: -58.3733 }, // San Telmo
+    ubicacion: { lat: -34.6132, lng: -58.3733 },
   },
 };
 
+
 //#endregion
 
-/* CALCULO DE AÑO DINAMICO */
+/// <summary>
+/// Calcula el año actual y lo muestra en el elemento con id "year".
+/// </summary>
 var yearElement = document.getElementById("year");
 var currentYear = new Date().getFullYear();
 yearElement.textContent = currentYear;
 
-/* MODO OSCURITO */
+/// <summary>
+/// Configura el modo oscuro de la aplicación basado en la preferencia del usuario.
+/// </summary>
 function darkMode() {
   const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 
@@ -150,28 +185,40 @@ function darkMode() {
   });
 }
 
-/* MENU MOVIL */
+/// <summary>
+/// Configura los eventos para el menú móvil.
+/// </summary>
 function eventListeners() {
   document
     .querySelector(".mobile-menu")
     .addEventListener("click", toggleNavigation);
 }
 
-/* MOSTRAR NAVEGACION */
+/// <summary>
+/// Alterna la visibilidad del menú de navegación en dispositivos móviles.
+/// </summary>
 function toggleNavigation() {
   document.querySelector(".navegacion").classList.toggle("mostrar");
 }
 
 
 
-/* RESUMIR TEXTO */
+/// <summary>
+/// Resume un texto a una longitud máxima especificada.
+/// </summary>
+/// <param name="texto">El texto que se va a resumir.</param>
+/// <param name="longitudMaxima">La longitud máxima del texto resumido.</param>
+/// <returns>El texto resumido, añadiendo "..." si es necesario.</returns>
 function resumirTexto(texto, longitudMaxima) {
   return texto.length > longitudMaxima
     ? texto.substring(0, longitudMaxima) + '...'
     : texto;
 }
 
-/* CARGAR PROPIEDADES */
+/// <summary>
+/// Carga las propiedades en el contenedor especificado.
+/// </summary>
+/// <param name="limite">Número máximo de propiedades a cargar.</param>
 function cargarPropiedades(limite = Object.keys(propiedades).length) {
 
   const contenedor = document.querySelector(".contenedor-anuncios");
@@ -215,7 +262,9 @@ function cargarPropiedades(limite = Object.keys(propiedades).length) {
   });
 }
 
-/* CARGAR PROPIEDAD SELECCIONADA */
+/// <summary>
+/// Carga la propiedad seleccionada en la página.
+/// </summary>
 function cargarPropiedad() {
   const urlParams = new URLSearchParams(window.location.search);
   const id = urlParams.get("id");
@@ -224,24 +273,38 @@ function cargarPropiedad() {
     const propiedad = propiedades[id];
     console.log(propiedad);
     document.getElementById("titulo-propiedad").textContent = propiedad.titulo;
-    document.getElementById("imagen-propiedad").src = propiedad.imagen;
     document.getElementById("descripcion-propiedad").textContent = propiedad.descripcion;
     document.getElementById("precio-propiedad").textContent = propiedad.precio;
     document.getElementById("sanitarios").textContent = propiedad.sanitarios;
     document.getElementById("estacionamientos").textContent = propiedad.estacionamientos;
     document.getElementById("dormitorios").textContent = propiedad.dormitorios;
 
-    // Inicializar el mapa después de verificar que la API de Google Maps está cargada
+    // Establecer imágenes interiores en el carrusel
+    const imagenesInterior = propiedad.imagenesInterior;
+    const carouselInner = document.querySelector('.carousel-inner');
+    carouselInner.innerHTML = ''; // Limpiar contenido previo
+
+    imagenesInterior.forEach((imagen, index) => {
+      const item = document.createElement('div');
+      item.className = `carousel-item ${index === 0 ? 'active' : ''}`;
+      const img = document.createElement('img');
+      img.src = imagen;
+      img.alt = `Imagen Interior ${index + 1}`;
+      img.className = 'img-fluid mb-4';
+      item.appendChild(img);
+      carouselInner.appendChild(item);
+    });
+
+    // Inicializar el mapa
     if (typeof google !== 'undefined' && google.maps) {
       initMap(propiedad.ubicacion);
     } else {
-      // Esperar hasta que la API se cargue
       const checkGoogleMaps = setInterval(() => {
         if (typeof google !== 'undefined' && google.maps) {
           clearInterval(checkGoogleMaps);
           initMap(propiedad.ubicacion);
         }
-      }, 100); // Comprobar cada 100 ms
+      }, 100);
     }
   } else {
     document.body.innerHTML = "<h1 class='text-center'>Propiedad no encontrada</h1>";
@@ -250,7 +313,11 @@ function cargarPropiedad() {
 
 
 
-/* INICIALIZAR MAPA */
+
+/// <summary>
+/// Inicializa el mapa de Google Maps en la ubicación de la propiedad.
+/// </summary>
+/// <param name="ubicacion">La ubicación de la propiedad que se mostrará en el mapa.</param>
 function initMap(ubicacion) {
 
   const map = new google.maps.Map(document.getElementById("map"), {
@@ -265,7 +332,10 @@ function initMap(ubicacion) {
   });
 }
 
-/* CARGAR ARTÍCULOS EN LISTA */
+/// <summary>
+/// Carga los artículos en la lista según la página actual.
+/// </summary>
+/// <param name="limite">Número máximo de artículos a cargar.</param>
 function cargarArticulos(limite = articulos.length) {
   const longitudMaximaDescripcion = 30; // Longitud máxima de la descripción
 
@@ -306,7 +376,9 @@ function cargarArticulos(limite = articulos.length) {
   });
 }
 
-/* EVENTOS AL CARGAR LA PÁGINA */
+/// <summary>
+/// Configura los eventos al cargar la página, cargando artículos y propiedades según corresponda.
+/// </summary>
 document.addEventListener("DOMContentLoaded", function () {
   eventListeners();
   darkMode();
@@ -326,9 +398,11 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-//#region FAVORITOS Y CONSTANTES
+//#region FAVORITOS 
 
-/*Favoritos*/
+/// <summary>
+/// Configura los eventos para eliminar favoritos.
+/// </summary>
 document.querySelectorAll('.eliminar-favorito').forEach(boton => {
   boton.addEventListener('click', function () {
     const id = this.getAttribute('data-id');
@@ -337,7 +411,9 @@ document.querySelectorAll('.eliminar-favorito').forEach(boton => {
   });
 });
 
-/*Promociones*/
+/// <summary>
+/// Configura los eventos para generar cupones de descuento.
+/// </summary>
 document.querySelectorAll('.generar-cupon').forEach(boton => {
   boton.addEventListener('click', function () {
     const cupon = 'CUPON-' + Math.random().toString(36).substr(2, 8).toUpperCase();
