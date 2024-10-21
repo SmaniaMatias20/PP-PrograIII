@@ -1,6 +1,5 @@
 //#region CONSTANTES
 
-
 /* ARTÍCULOS */
 const articulos = [
   {
@@ -111,46 +110,18 @@ yearElement.textContent = currentYear;
 /* MODO OSCURITO */
 function darkMode() {
   const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+  prefersDarkScheme.matches
+    ? document.body.classList.add("darkMode")
+    : document.body.classList.remove("darkMode");
 
-  //Guardo en el almacenamiento local del navegador la preferencia de tema de usuario
-  const userPreference = localStorage.getItem("theme");
-
-  if (userPreference) {
-    if (userPreference === "dark") {
-      document.body.classList.add("darkMode");
-    } else {
-      document.body.classList.remove("darkMode");
-    }
-  } else {
-    prefersDarkScheme.matches
-      ? document.body.classList.add("darkMode")
-      : document.body.classList.remove("darkMode");
-  }
-
-  // Listener para el boton de cambiar de modo
-  document.querySelector(".dark-mode-boton").addEventListener("click", () => {
-    document.body.classList.toggle("darkMode");
-
-    // Guardar la preferencia del usuario en localStorage
-    if (document.body.classList.contains("darkMode")) {
-      localStorage.setItem("theme", "dark");
-    } else {
-      localStorage.setItem("theme", "light");
-    }
-  });
-
-  // se fija en si se cambia de tema
   prefersDarkScheme.addEventListener("change", () => {
     prefersDarkScheme.matches
       ? document.body.classList.add("darkMode")
       : document.body.classList.remove("darkMode");
+  });
 
-    // Actualizar el localStorage
-    if (prefersDarkScheme.matches) {
-      localStorage.setItem("theme", "dark");
-    } else {
-      localStorage.setItem("theme", "light");
-    }
+  document.querySelector(".dark-mode-boton").addEventListener("click", () => {
+    document.body.classList.toggle("darkMode");
   });
 }
 
@@ -226,6 +197,7 @@ function cargarPropiedad() {
 
   if (propiedades[id]) {
     const propiedad = propiedades[id];
+    console.log(propiedad);
     document.getElementById("titulo-propiedad").textContent = propiedad.titulo;
     document.getElementById("imagen-propiedad").src = propiedad.imagen;
     document.getElementById("descripcion-propiedad").textContent = propiedad.descripcion;

@@ -9,6 +9,7 @@
   --blanco: #fff;
   --negro: #000;
   --blanco-anuncio: #f5f5f5;
+  --rojo: #cf2b28;
 }
 
 html {
@@ -629,7 +630,8 @@ h4 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f5f5f5;
+  background-color: transparent;
+  border: 1px solid var(--naranja);
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 5px;
@@ -640,7 +642,7 @@ h4 {
 }
 
 .boton-rojo {
-  background-color: #ff4d4d;
+  background-color: var(--naranja);
   color: white;
   border: none;
   padding: 5px 10px;
@@ -649,20 +651,25 @@ h4 {
 }
 
 .boton-rojo:hover {
-  background-color: #ff3333;
+  background-color: var(--rojo);
 }
 
 /*promociones*/
 .promocion-item {
-  background-color: #f5f5f5;
-  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid var(--naranja);
+  padding: 0px;
   margin-bottom: 10px;
   border-radius: 5px;
 }
 
 .boton-amarillo {
-  background-color: #ffdd57;
-  color: black;
+  background-color: var(--naranja);
+  color: white;
   border: none;
   padding: 5px 10px;
   border-radius: 5px;
