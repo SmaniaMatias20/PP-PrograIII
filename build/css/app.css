@@ -400,6 +400,38 @@ h4 {
   font-size: 1.8rem;
   text-align: center;
   text-decoration: none;
+  position: relative;
+  /* Para el pseudo-elemento */
+  padding: 10px 0;
+  /* Espacio alrededor del enlace */
+}
+
+.navegacion a.active {
+  color: var(--naranja);
+  /* Color para el enlace activo */
+}
+
+.navegacion a::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  /* Ajusta la posición del subrayado */
+  width: 0;
+  height: 2px;
+  /* Altura del subrayado */
+  background-color: var(--naranja);
+  /* Color del subrayado */
+  transition: width 0.3s ease, left 0.3s ease;
+  /* Transición suave */
+}
+
+.navegacion a:hover::after,
+.navegacion a.active::after {
+  width: 100%;
+  /* Ancho completo cuando está activo o al pasar el mouse */
+  left: 0;
+  /* Alinear a la izquierda */
 }
 
 .mobile-menu img {
