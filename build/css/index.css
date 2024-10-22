@@ -1,6 +1,6 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    font-family: Lato, sans-serif;
+    background-color: var(--gris-claro);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,15 +8,39 @@ body {
     margin: 0;
 }
 
-.login-container {
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-container {
+    background-color: var(--blanco);
+    padding: 3rem;
+    border-radius: 1rem;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+    /* Sombra */
+    width: 400px;
+    border: 2px solid var(--gris-claro);
+    /* Borde */
+    transition: transform 0.3s;
+    /* Transición al pasar el mouse */
+}
+
+.form-container:hover {
+    transform: translateY(-5px);
+    /* Efecto de elevación */
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+    /* Sombra aumentada al pasar el mouse */
 }
 
 h2 {
-    margin-bottom: 20px;
+    margin-bottom: 2.5rem;
+    color: var(--negro);
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    /* Hacer el título más destacado */
 }
 
 form {
@@ -25,30 +49,62 @@ form {
 }
 
 label {
-    margin-bottom: 5px;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+    /* Peso de fuente más ligero */
+    font-size: 1.1rem;
 }
 
 input {
-    margin-bottom: 15px;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border: 1px solid #e1e1e1;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+    /* Transición para el borde */
+}
+
+input:focus {
+    border-color: var(--naranja);
+    /* Cambiar color del borde al enfocar */
+    outline: none;
+    /* Eliminar contorno por defecto */
 }
 
 button {
-    padding: 10px;
-    background-color: #007BFF;
-    color: white;
+    padding: 1rem;
+    background-color: var(--naranja);
+    color: var(--blanco);
     border: none;
-    border-radius: 4px;
+    border-radius: 0.5rem;
     cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s;
+    /* Transiciones suaves */
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: var(--rojo);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    /* Sombra más intensa en hover */
+    transform: scale(1.05);
+    /* Escalar ligeramente el botón */
 }
 
-#message {
-    color: red;
-    margin-top: 10px;
+#message,
+#registerMessage {
+    color: var(--rojo);
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 1rem;
+    transition: opacity 0.3s;
+    /* Transición para mensajes */
+}
+
+#message.hidden,
+#registerMessage.hidden {
+    opacity: 0;
+    /* Ocultar mensajes */
 }

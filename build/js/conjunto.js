@@ -52,7 +52,6 @@ const propiedades = {
     estacionamientos: 5,
     dormitorios: 4,
     ubicacion: { lat: -34.6083, lng: -58.3732 },
-    reservada: false, // Cambia a true si está reservada
   },
   2: {
     titulo: "Casa con balcón",
@@ -68,7 +67,6 @@ const propiedades = {
     estacionamientos: 3,
     dormitorios: 4,
     ubicacion: { lat: -34.5889, lng: -58.3962 },
-    reservada: false,
   },
   3: {
     titulo: "Casa de verano",
@@ -84,7 +82,6 @@ const propiedades = {
     estacionamientos: 1,
     dormitorios: 3,
     ubicacion: { lat: -34.5880, lng: -58.4072 },
-    reservada: true, // Ejemplo de propiedad reservada
   },
   4: {
     titulo: "Casa moderna",
@@ -100,7 +97,6 @@ const propiedades = {
     estacionamientos: 2,
     dormitorios: 5,
     ubicacion: { lat: -34.6170, lng: -58.3643 },
-    reservada: false,
   },
   5: {
     titulo: "Casa minimalista",
@@ -116,7 +112,6 @@ const propiedades = {
     estacionamientos: 2,
     dormitorios: 3,
     ubicacion: { lat: -34.5733, lng: -58.4391 },
-    reservada: true, // Otra propiedad reservada
   },
   6: {
     titulo: "Casa con alberca",
@@ -132,10 +127,8 @@ const propiedades = {
     estacionamientos: 3,
     dormitorios: 4,
     ubicacion: { lat: -34.6132, lng: -58.3733 },
-    reservada: false,
   },
 };
-
 
 
 //#endregion
@@ -278,11 +271,6 @@ function cargarPropiedad() {
 
   if (propiedades[id]) {
     const propiedad = propiedades[id];
-
-    // Verificar el estado guardado en localStorage
-    const estadoGuardado = localStorage.getItem(`estado-${id}`);
-    propiedad.reservada = estadoGuardado === 'true'; // Actualizar el estado basado en localStorage
-
     console.log(propiedad);
     document.getElementById("titulo-propiedad").textContent = propiedad.titulo;
     document.getElementById("descripcion-propiedad").textContent = propiedad.descripcion;
@@ -290,24 +278,6 @@ function cargarPropiedad() {
     document.getElementById("sanitarios").textContent = propiedad.sanitarios;
     document.getElementById("estacionamientos").textContent = propiedad.estacionamientos;
     document.getElementById("dormitorios").textContent = propiedad.dormitorios;
-
-    // Renderizar estado en forma de botón
-    const estadoPropiedadDiv = document.getElementById("estado-propiedad");
-    const estadoButton = document.createElement("button");
-    estadoButton.textContent = propiedad.reservada ? "Reservada" : "Disponible";
-    estadoButton.className = propiedad.reservada ? "btn btn-danger" : "btn btn-success";
-
-    estadoButton.onclick = function () {
-      propiedad.reservada = !propiedad.reservada; // Cambia el estado
-      estadoButton.textContent = propiedad.reservada ? "Reservada" : "Disponible"; // Actualiza el texto del botón
-      estadoButton.className = propiedad.reservada ? "btn btn-danger" : "btn btn-success"; // Cambia el estilo del botón
-
-      // Guardar el nuevo estado en localStorage
-      localStorage.setItem(`estado-${id}`, propiedad.reservada);
-    };
-
-    estadoPropiedadDiv.innerHTML = ''; // Limpiar contenido previo
-    estadoPropiedadDiv.appendChild(estadoButton);
 
     // Establecer imágenes interiores en el carrusel
     const imagenesInterior = propiedad.imagenesInterior;
@@ -340,8 +310,6 @@ function cargarPropiedad() {
     document.body.innerHTML = "<h1 class='text-center'>Propiedad no encontrada</h1>";
   }
 }
-
-
 
 
 

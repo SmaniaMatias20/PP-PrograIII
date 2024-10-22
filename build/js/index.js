@@ -1,9 +1,7 @@
-const users = [
-    { username: 'admin', password: '1234' },
-    { username: 'user1', password: 'pass1' },
-    { username: 'user2', password: 'pass2' }
-];
+// Cargar usuarios desde localStorage o inicializar si no existen
+const users = JSON.parse(localStorage.getItem('users')) || [];
 
+// Función para manejar el inicio de sesión
 document.getElementById('loginForm').addEventListener('submit', function (event) {
     event.preventDefault();
 
@@ -17,10 +15,57 @@ document.getElementById('loginForm').addEventListener('submit', function (event)
     if (user) {
         message.style.color = 'green';
         message.textContent = 'Inicio de sesión exitoso';
-        // Aquí puedes redirigir a otra página
+        // Redirigir a otra página si es necesario
         window.location.href = 'build/pages/inicio.html';
     } else {
         message.style.color = 'red';
         message.textContent = 'Usuario o contraseña incorrectos';
     }
+});
+
+// Función para manejar el registro de nuevos usuarios
+function registerUser(username, password) {
+    // Verificar si el usuario ya existe
+    const existingUser = users.find(u => u.username === username);
+
+    if (existingUser) {
+        return 'El usuario ya existe';
+    }
+
+    // Agregar nuevo usuario
+    users.push({ username, password });
+
+    // Guardar usuarios en localStorage
+    localStorage.setItem('users', JSON.stringify(users));
+
+    return 'Registro exitoso';
+}
+
+// Manejar el registro de nuevos usuarios
+document.getElementById('registerForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const username = document.getElementById('registerUsername').value;
+    const password = document.getElementById('registerPassword').value;
+    const registerMessage = document.getElementById('registerMessage');
+
+    const result = registerUser(username, password);
+    registerMessage.textContent = result;
+
+    // Limpiar los campos
+    document.getElementById('registerUsername').value = '';
+    document.getElementById('registerPassword').value = '';
+});
+
+// Mostrar/Ocultar formularios
+document.getElementById('showRegister').addEventListener('click', function (event) {
+    event.preventDefault();
+    document.querySelector('.login-container').style.display = 'none';
+    document.querySelector('.register-container').style.display = 'block';
+});
+
+document.getElementById('showLogin').addEventListener('click', function (event) {
+    event.preventDefault();
+    document.querySelector('.login-container').style.display = 'block';
+    document.querySelector('.register-container').style.display = 'none';
 });
