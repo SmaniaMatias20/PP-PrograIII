@@ -786,7 +786,23 @@ h4 {
   border: 0;
 }
 
-@media (min-width: 890px) {
+.btn-favorito {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-favorito img {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s;
+}
+
+.btn-favorito img:hover {
+  transform: scale(1.2);
+}
+
+@media (min-width: 768px) {
   .derecha {
     align-items: flex-end;
   }
