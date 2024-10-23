@@ -14,16 +14,16 @@ Este proyecto es una aplicación web dedicada al sector de bienes raíces. Permi
 - Smania Matías (Desarrollador)
 
 ## Tecnologías Utilizadas
-- **Lenguajes**: 
-  - ![HTML](https://img.icons8.com/color/48/000000/html-5.png) HTML: Para la estructura del contenido.
-  - ![CSS](https://img.icons8.com/color/48/000000/css3.png) CSS: Para el diseño y estilo de la interfaz.
-  - ![JavaScript](https://img.icons8.com/color/48/000000/javascript.png) JavaScript: Para la lógica y funcionalidad de la aplicación.
+**Lenguajes**: 
+![HTML](https://img.icons8.com/color/48/000000/html-5.png) HTML: Para la estructura del contenido.
+![CSS](https://img.icons8.com/color/48/000000/css3.png) CSS: Para el diseño y estilo de la interfaz.
+![JavaScript](https://img.icons8.com/color/48/000000/javascript.png) JavaScript: Para la lógica y funcionalidad de la aplicación.
   
-- **Frameworks**: 
-  - ![Bootstrap](https://img.icons8.com/color/48/000000/bootstrap.png) Bootstrap: Para un diseño responsivo y componentes estilizados.
+**Frameworks**: 
+![Bootstrap](https://img.icons8.com/color/48/000000/bootstrap.png) Bootstrap: Para un diseño responsivo y componentes estilizados.
 
-- **API**: 
-  - ![Google Maps](https://img.icons8.com/color/48/000000/google-maps.png) Google Maps API: Para integrar funcionalidades de mapas y geolocalización.
+**API**: 
+![Google Maps](https://img.icons8.com/color/48/000000/google-maps.png) Google Maps API: Para integrar funcionalidades de mapas y geolocalización.
 
 
  
