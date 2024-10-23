@@ -29,7 +29,7 @@ Este proyecto es una aplicación web dedicada al sector de bienes raíces. Permi
 ### Sección Inicio... ![Inicio](https://img.icons8.com/color/48/000000/home.png)
 ![Inicio](https://github.com/SmaniaMatias20/PP-PrograIII/blob/matias/build/src/readme/inicio.png)  
 
-### Sección Nosotros... ![Nosotros](https://img.icons8.com/color/48/000000/team.png)
+### Sección Nosotros... ![Nosotros](https://img.icons8.com/color/48/000000/teamwork.png)
 ![Nosotros](https://github.com/SmaniaMatias20/PP-PrograIII/blob/matias/build/src/readme/nosotros.png)  
 
 ### Sección Anuncios... ![Anuncios](https://img.icons8.com/color/48/000000/sale.png)
