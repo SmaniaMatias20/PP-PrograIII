@@ -29,14 +29,14 @@ Este proyecto es una aplicación web dedicada al sector de bienes raíces. Permi
 ### Sección Inicio... ![Inicio](https://img.icons8.com/color/48/000000/home.png)
 ![Inicio](https://github.com/SmaniaMatias20/PP-PrograIII/blob/matias/build/src/readme/inicio.png)  
 
-### Sección Nosotros...
-![Nosotros](https://img.icons8.com/color/48/000000/user-group.png) ![Nosotros](https://github.com/SmaniaMatias20/PP-PrograIII/blob/matias/build/src/readme/nosotros.png)  
+### Sección Nosotros... ![Nosotros](https://img.icons8.com/color/48/000000/team.png)
+![Nosotros](https://github.com/SmaniaMatias20/PP-PrograIII/blob/matias/build/src/readme/nosotros.png)  
 
-### Sección Anuncios...
-![Anuncios](https://img.icons8.com/color/48/000000/sale.png) ![Anuncios](https://github.com/SmaniaMatias20/PP-PrograIII/blob/matias/build/src/readme/anuncios.png)  
+### Sección Anuncios... ![Anuncios](https://img.icons8.com/color/48/000000/sale.png)
+![Anuncios](https://github.com/SmaniaMatias20/PP-PrograIII/blob/matias/build/src/readme/anuncios.png)  
 
-### Sección Blog...
-![Blog](https://img.icons8.com/color/48/000000/blog.png) ![Blog](https://github.com/SmaniaMatias20/PP-PrograIII/blob/matias/build/src/readme/blog.png)  
+### Sección Blog... ![Blog](https://img.icons8.com/color/48/000000/blog.png)
+![Blog](https://github.com/SmaniaMatias20/PP-PrograIII/blob/matias/build/src/readme/blog.png)  
 
-### Sección Contacto...
-![Contacto](https://img.icons8.com/color/48/000000/contact.png) ![Contacto](https://github.com/SmaniaMatias20/PP-PrograIII/blob/matias/build/src/readme/contacto.png)  
+### Sección Contacto... ![Contacto](https://img.icons8.com/color/48/000000/email.png)
+![Contacto](https://github.com/SmaniaMatias20/PP-PrograIII/blob/matias/build/src/readme/contacto.png)  
