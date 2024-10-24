@@ -214,7 +214,7 @@ function resumirTexto(texto, longitudMaxima) {
     ? texto.substring(0, longitudMaxima) + '...'
     : texto;
 }
-
+//#region  Metodos para propiedades
 /// <summary>
 /// Carga las propiedades en el contenedor especificado.
 /// </summary>
@@ -231,8 +231,6 @@ function cargarPropiedades(limite = Object.keys(propiedades).length) {
     const anuncio = document.createElement('div');
     anuncio.classList.add('anuncio');
 
-    // Aquí añadimos el botón de favoritos con el corazón
-    const isFavorito = verificarFavorito(key); // Función para verificar si ya está en favoritos
 
     anuncio.innerHTML = `
       <picture>
@@ -258,90 +256,12 @@ function cargarPropiedades(limite = Object.keys(propiedades).length) {
           </li>
         </ul>
         <a href="propiedad.html?id=${key}" class="boton-amarillo-block">Ver Propiedad</a>
-        <button class="boton-like" data-id="${key}">
-          <img src="../src/iconos/corazon-${isFavorito ? 'rojo' : 'blanco'}.svg" alt="Favorito" />
-        </button>
       </div>
     `;
 
     contenedor.appendChild(anuncio);
-
-    // Agregar evento al botón de like
-    const botonLike = anuncio.querySelector('.boton-like');
-    botonLike.addEventListener('click', () => {
-      toggleFavorito(key);
-      actualizarIconoFavorito(botonLike);
-    });
   });
 }
-
-// Función para verificar si ya está en favoritos
-function verificarFavorito(id) {
-  const favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
-  return favoritos.includes(id);
-}
-
-// Función para agregar/quitar de favoritos
-function toggleFavorito(id) {
-  let favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
-  if (favoritos.includes(id)) {
-    favoritos = favoritos.filter(fav => fav !== id);
-  } else {
-    favoritos.push(id);
-  }
-  localStorage.setItem('favoritos', JSON.stringify(favoritos));
-}
-
-// Función para actualizar el ícono del botón de favorito
-function actualizarIconoFavorito(botonLike) {
-  const id = botonLike.dataset.id;
-  const isFavorito = verificarFavorito(id);
-  const icono = botonLike.querySelector('img');
-  icono.src = `../src/iconos/corazon-${isFavorito ? 'rojo' : 'blanco'}.svg`;
-}
-
-// function cargarPropiedades(limite = Object.keys(propiedades).length) {
-
-//   const contenedor = document.querySelector(".contenedor-anuncios");
-
-
-//   const longitudMaximaDescripcion = 50; // Longitud máxima de la descripción
-
-//   Object.keys(propiedades).slice(0, limite).forEach(key => {
-//     const propiedad = propiedades[key];
-//     const anuncio = document.createElement('div');
-//     anuncio.classList.add('anuncio');
-
-//     anuncio.innerHTML = `
-//       <picture>
-//         <source srcset="${propiedad.imagen}" type="image/jpeg" />
-//         <img src="${propiedad.imagen}" alt="Imagen ${propiedad.titulo}" />
-//       </picture>
-//       <div class="contenido-anuncios">
-//         <h3>${propiedad.titulo}</h3>
-//         <p>${resumirTexto(propiedad.descripcion, longitudMaximaDescripcion)}</p>
-//         <p class="precio">${propiedad.precio}</p>
-//         <ul class="iconos-caracteristicas">
-//           <li>
-//             <img class="icono" loading="lazy" src="../src/iconos/icono_wc.svg" alt="icono_wc" />
-//             <p>${propiedad.sanitarios}</p>
-//           </li>
-//           <li>
-//             <img class="icono" loading="lazy" src="../src/iconos/icono_estacionamiento.svg" alt="icono_estacionamiento" />
-//             <p>${propiedad.estacionamientos}</p>
-//           </li>
-//           <li>
-//             <img class="icono" loading="lazy" src="../src/iconos/icono_dormitorio.svg" alt="icono_dormitorio" />
-//             <p>${propiedad.dormitorios}</p>
-//           </li>
-//         </ul>
-//         <a href="propiedad.html?id=${key}" class="boton-amarillo-block">Ver Propiedad</a>
-//       </div>
-//     `;
-
-//     contenedor.appendChild(anuncio);
-//   });
-// }
 
 /// <summary>
 /// Carga la propiedad seleccionada en la página.
@@ -391,8 +311,7 @@ function cargarPropiedad() {
     document.body.innerHTML = "<h1 class='text-center'>Propiedad no encontrada</h1>";
   }
 }
-
-
+//#endregion
 
 
 /// <summary>
@@ -479,16 +398,16 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-//#region FAVORITOS 
+//#region reservaS 
 
 /// <summary>
-/// Configura los eventos para eliminar favoritos.
+/// Configura los eventos para eliminar reservas.
 /// </summary>
-document.querySelectorAll('.eliminar-favorito').forEach(boton => {
+document.querySelectorAll('.eliminar-reserva').forEach(boton => {
   boton.addEventListener('click', function () {
     const id = this.getAttribute('data-id');
     this.parentElement.remove();
-    alert('Eliminado de favoritos');
+    alert('Eliminado de reservas');
   });
 });
 
