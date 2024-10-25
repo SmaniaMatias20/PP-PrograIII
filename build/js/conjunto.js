@@ -477,6 +477,15 @@ document.addEventListener("DOMContentLoaded", function () {
   } else if (window.location.pathname.includes("propiedad.html")) {
     cargarPropiedad();
   }
+
+  // Configuración de ScrollReveal para animaciones en todos los elementos <main>
+  ScrollReveal().reveal('main', {
+    duration: 1000,
+    distance: '50px',
+    easing: 'ease-in-out',
+    delay: 100, // Delay de 100 ms antes de iniciar la animación
+    interval: 200 // Animación con un intervalo de 200 ms entre elementos
+  });
 });
 
 //#region FAVORITOS 
