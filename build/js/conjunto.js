@@ -331,25 +331,6 @@ function initMapAsync(location) {
 }
 //#endregion
 
-
-/// <summary>
-/// Inicializa el mapa de Google Maps en la ubicación de la propiedad.
-/// </summary>
-/// <param name="ubicacion">La ubicación de la propiedad que se mostrará en el mapa.</param>
-function initMap(ubicacion) {
-
-  const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 15,
-    center: ubicacion,
-  });
-
-  new google.maps.Marker({
-    position: ubicacion,
-    map: map,
-    title: "Propiedad",
-  });
-}
-
 /// <summary>
 /// Carga los artículos en la lista según la página actual.
 /// </summary>
