@@ -264,15 +264,17 @@ function cargarPropiedades(limite = Object.keys(propiedades).length) {
 }
 
 /// <summary>
-/// Carga la propiedad seleccionada en la página.
+/// Carga la propiedad desde los parámetros de la URL y actualiza la interfaz de usuario.
 /// </summary>
-function cargarPropiedad() {
+async function cargarPropiedad() {
   const urlParams = new URLSearchParams(window.location.search);
   const id = urlParams.get("id");
 
   if (propiedades[id]) {
     const propiedad = propiedades[id];
     console.log(propiedad);
+
+    // Update property details in the DOM
     document.getElementById("titulo-propiedad").textContent = propiedad.titulo;
     document.getElementById("descripcion-propiedad").textContent = propiedad.descripcion;
     document.getElementById("precio-propiedad").textContent = propiedad.precio;
@@ -280,10 +282,10 @@ function cargarPropiedad() {
     document.getElementById("estacionamientos").textContent = propiedad.estacionamientos;
     document.getElementById("dormitorios").textContent = propiedad.dormitorios;
 
-    // Establecer imágenes interiores en el carrusel
+    // Set interior images in the carousel
     const imagenesInterior = propiedad.imagenesInterior;
     const carouselInner = document.querySelector('.carousel-inner');
-    carouselInner.innerHTML = ''; // Limpiar contenido previo
+    carouselInner.innerHTML = ''; // Clear previous content
 
     imagenesInterior.forEach((imagen, index) => {
       const item = document.createElement('div');
@@ -296,20 +298,36 @@ function cargarPropiedad() {
       carouselInner.appendChild(item);
     });
 
-    // Inicializar el mapa
-    if (typeof google !== 'undefined' && google.maps) {
-      initMap(propiedad.ubicacion);
-    } else {
-      const checkGoogleMaps = setInterval(() => {
-        if (typeof google !== 'undefined' && google.maps) {
-          clearInterval(checkGoogleMaps);
-          initMap(propiedad.ubicacion);
-        }
-      }, 100);
+    // Initialize the map asynchronously
+    try {
+      await initMapAsync(propiedad.ubicacion); // Await the asynchronous map initialization
+    } catch (error) {
+      console.error("Error al inicializar el mapa:", error);
+      document.body.innerHTML = "<h1 class='text-center'>Error al cargar el mapa</h1>";
     }
   } else {
     document.body.innerHTML = "<h1 class='text-center'>Propiedad no encontrada</h1>";
   }
+}
+
+/// <summary>
+/// Inicializa el mapa de Google Maps en la ubicación de la propiedad.
+/// </summary>
+/// <param name="ubicacion">La ubicación de la propiedad que se mostrará en el mapa.</param>
+/// <returns>Una promesa que se resuelve cuando el mapa ha sido inicializado.</returns>
+function initMapAsync(location) {
+  return new Promise((resolve, reject) => {
+    if (typeof google !== 'undefined' && google.maps) {
+
+      const map = new google.maps.Map(document.getElementById("map"), {
+        center: location,
+        zoom: 15,
+      });
+      resolve(map);
+    } else {
+      reject(new Error("Google Maps API is not loaded"));
+    }
+  });
 }
 //#endregion
 
