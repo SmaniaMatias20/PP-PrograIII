@@ -300,7 +300,7 @@ async function cargarPropiedad() {
 
     // Initialize the map asynchronously
     try {
-      await initMapAsync(propiedad.ubicacion); // Await the asynchronous map initialization
+      await inicializarMapa(propiedad.ubicacion); // Await the asynchronous map initialization
     } catch (error) {
       console.error("Error al inicializar el mapa:", error);
       document.body.innerHTML = "<h1 class='text-center'>Error al cargar el mapa</h1>";
@@ -315,7 +315,7 @@ async function cargarPropiedad() {
 /// </summary>
 /// <param name="ubicacion">La ubicación de la propiedad que se mostrará en el mapa.</param>
 /// <returns>Una promesa que se resuelve cuando el mapa ha sido inicializado.</returns>
-function initMapAsync(location) {
+function inicializarMapa(location) {
   return new Promise((resolve, reject) => {
     if (typeof google !== 'undefined' && google.maps) {
 
