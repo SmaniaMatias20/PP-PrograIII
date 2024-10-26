@@ -11,6 +11,7 @@ La estructura del sitio fue diseñada con un enfoque centrado en el usuario, ase
 - **Nosotros**
 - **Anuncios**
 - **Blog**
+- **Reservas**
 - **Contacto**
 
 Esta organización permite a los usuarios acceder rápidamente a la información deseada.
@@ -26,7 +27,7 @@ Se utilizó Bootstrap como framework para asegurar que el sitio sea responsivo y
 ## Desarrollo de Funcionalidades
 
 ### 1. Búsqueda de Propiedades
-Se implementó un sistema de búsqueda que permite a los usuarios filtrar propiedades por diferentes criterios, como precio, ubicación y tipo de propiedad. Esta funcionalidad se desarrolló utilizando JavaScript para una experiencia de búsqueda dinámica y rápida.
+La funcionalidad de búsqueda de propiedades permite a los usuarios visualizar todas las propiedades disponibles en el sitio. No se implementaron filtros para esta sección; en su lugar, se ofrece una vista general de todas las propiedades.
 
 ### 2. Mapa Interactivo
 La integración de Google Maps API proporciona una representación visual de la ubicación de las propiedades. Los usuarios pueden ver los anuncios en un mapa interactivo, lo que facilita la búsqueda geográfica. La selección de esta funcionalidad se basó en la necesidad de mejorar la usabilidad y la interacción del usuario.
