@@ -1,5 +1,6 @@
 // Cargar usuarios desde localStorage o inicializar si no existen
 const users = JSON.parse(localStorage.getItem('users')) || [];
+console.log(users);
 
 // Función para manejar el inicio de sesión
 document.getElementById('loginForm').addEventListener('submit', function (event) {
@@ -15,7 +16,7 @@ document.getElementById('loginForm').addEventListener('submit', function (event)
     if (user) {
         message.style.color = 'green';
         message.textContent = 'Inicio de sesión exitoso';
-        // Redirigir a otra página si es necesario
+        // Redirigir a otra página
         window.location.href = 'build/pages/inicio.html';
     } else {
         message.style.color = 'red';
