@@ -532,13 +532,19 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Configuración de ScrollReveal para animaciones en todos los elementos <main>
-  ScrollReveal().reveal('main', {
+  const revealOptions = {
     duration: 1000,
     distance: '50px',
     easing: 'ease-in-out',
     delay: 100, // Delay de 100 ms antes de iniciar la animación
     interval: 200 // Animación con un intervalo de 200 ms entre elementos
-  });
+  };
+
+  // Reveal the main element
+  ScrollReveal().reveal('main', revealOptions);
+
+  // Reveal the section elements
+  ScrollReveal().reveal('section', revealOptions);
 });
 //#endregion
 
