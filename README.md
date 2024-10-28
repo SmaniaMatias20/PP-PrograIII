@@ -74,7 +74,7 @@ El desarrollo del sitio web de bienes raíces fue un proceso enfocado en crear u
 ![Blog](https://github.com/SmaniaMatias20/PP-PrograIII/blob/matias/build/src/readme/blog.png)  
 
 ### Sección Reservas... ![Blog](https://img.icons8.com/color/48/000000/blog.png)
-![Blog](https://github.com/SmaniaMatias20/PP-PrograIII/blob/matias/build/src/readme/reservas.png) 
+![Blog](https://github.com/SmaniaMatias20/PP-PrograIII/blob/master/build/src/readme/reservas.png) 
 
 ### Sección Contacto... ![Contacto](https://img.icons8.com/color/48/000000/email.png)
 ![Contacto](https://github.com/SmaniaMatias20/PP-PrograIII/blob/matias/build/src/readme/contacto.png)  
