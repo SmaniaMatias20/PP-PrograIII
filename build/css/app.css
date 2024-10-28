@@ -791,25 +791,24 @@ h4 {
   position: relative; /* Para que el contenido del anuncio sea el contenedor de referencia */
 }
 
-.btn-favorito {
-  position: absolute;
-  top: 10px; /* Ajusta según necesites */
-  right: 10px; /* Ajusta según necesites */
-  background: transparent; /* Fondo transparente */
-  border: none; /* Elimina cualquier borde */
-  padding: 0; /* Sin relleno adicional */
-  z-index: 10; /* Asegura que el botón esté encima de la imagen */
+#btn-reserva {
+  background-color: var(--gris-oscuro);
+  border: none;
+  color: var(--blanco);
+  display: block;
+  font-weight: 700;
+  margin-top: 4.5rem;
+  padding: 1rem 3rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: large;
 }
 
-.btn-favorito img {
-  width: 30px; /* Tamaño del corazón */
-  height: 30px;
+#btn-reserva:hover {
+  background-color: var(--gris-oscuro);
   cursor: pointer;
 }
 
-.btn-favorito img:hover {
-  transform: scale(1.1); /* Efecto hover opcional */
-}
 
 @media (min-width: 768px) {
   .derecha {

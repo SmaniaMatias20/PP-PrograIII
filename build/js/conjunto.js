@@ -272,7 +272,6 @@ async function cargarPropiedad() {
 
   if (propiedades[id]) {
     const propiedad = propiedades[id];
-    console.log(propiedad);
 
     // Update property details in the DOM
     document.getElementById("titulo-propiedad").textContent = propiedad.titulo;
@@ -375,6 +374,87 @@ function cargarArticulos(limite = articulos.length) {
   });
 }
 
+//#region reservas
+
+document.addEventListener('DOMContentLoaded', function() {
+  const reservaButton = document.getElementById('btn-reserva');
+
+  if (reservaButton) {
+    reservaButton.addEventListener('click', function() {
+      const propiedad = {
+        titulo: document.getElementById('titulo-propiedad').textContent,
+        descripcion: document.getElementById('descripcion-propiedad').textContent,
+        precio: document.getElementById('precio-propiedad').textContent,
+        sanitarios: document.getElementById('sanitarios').textContent,
+        estacionamientos: document.getElementById('estacionamientos').textContent,
+        dormitorios: document.getElementById('dormitorios').textContent
+        //usuarioReserva:localStorage.getItem();
+      };
+
+      
+      let reservas = JSON.parse(localStorage.getItem('reservas')) || [];
+
+      
+      reservas.push(propiedad);
+
+   
+      localStorage.setItem('reservas', JSON.stringify(reservas));
+
+      
+      window.location.href = 'reservas.html';
+    });
+  }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Obtener el array de reservas desde el localStorage
+  const reservas = JSON.parse(localStorage.getItem('reservas')) || [];
+
+  const listaReservas = document.querySelector('.lista-reservas');
+
+  if (reservas.length > 0) {
+    // Iterar sobre cada reserva y mostrarla en la página
+    reservas.forEach((item, index) => {
+      const reservaItem = document.createElement('div');
+      reservaItem.classList.add('favorito-item');
+      reservaItem.innerHTML = `
+        <p><strong>${item.titulo}</strong> - ${item.dormitorios} Dormitorios</p>
+        <p>Descripción: ${item.descripcion}</p>
+        <p>Precio: ${item.precio}</p>
+        <p>Baños: ${item.sanitarios}, Estacionamientos: ${item.estacionamientos}</p>
+        <button class="boton-rojo eliminar-reserva" data-index="${index}">Eliminar de reservas</button>
+      `;
+
+      listaReservas.appendChild(reservaItem);
+    });
+
+    // eliminar reserva
+    document.querySelectorAll('.eliminar-reserva').forEach(button => {
+      button.addEventListener('click', function() {
+        const index = this.getAttribute('data-index');
+        
+        // eliminar y actualizar
+        reservas.splice(index, 1);
+        localStorage.setItem('reservas', JSON.stringify(reservas));
+        
+        // Actualizar la vista
+        this.parentElement.remove();
+
+        // Si no quedan reservas, muestra el mensaje de no reservas
+        if (reservas.length === 0) {
+          listaReservas.innerHTML = '<p>No hay ninguna reserva en este momento.</p>';
+        }
+      });
+    });
+  } else {
+    // Si no hay reservas, muestra un mensaje
+    listaReservas.innerHTML = '<p>No hay ninguna reserva en este momento.</p>';
+  }
+});
+
+
+//#endregion
+
 /// <summary>
 /// Configura los eventos al cargar la página, cargando artículos y propiedades según corresponda.
 /// </summary>
@@ -405,29 +485,3 @@ document.addEventListener("DOMContentLoaded", function () {
     interval: 200 // Animación con un intervalo de 200 ms entre elementos
   });
 });
-
-//#region reservaS 
-
-/// <summary>
-/// Configura los eventos para eliminar reservas.
-/// </summary>
-document.querySelectorAll('.eliminar-reserva').forEach(boton => {
-  boton.addEventListener('click', function () {
-    const id = this.getAttribute('data-id');
-    this.parentElement.remove();
-    alert('Eliminado de reservas');
-  });
-});
-
-/// <summary>
-/// Configura los eventos para generar cupones de descuento.
-/// </summary>
-document.querySelectorAll('.generar-cupon').forEach(boton => {
-  boton.addEventListener('click', function () {
-    const cupon = 'CUPON-' + Math.random().toString(36).substr(2, 8).toUpperCase();
-    this.nextElementSibling.textContent = 'Tu código de cupón: ' + cupon;
-    alert('Cupón generado: ' + cupon);
-  });
-});
-
-//#endregion
