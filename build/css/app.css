@@ -1,6 +1,45 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900");
 
 
+
+.contenedor-paginacion {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.boton-paginacion {
+  background-color: transparent;
+  border: 1px solid #ccc;
+  color: #333;
+  cursor: pointer;
+  padding: 0.4rem 0.8rem;
+  border-radius: 50%;
+  font-size: 1.25rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+
+.boton-paginacion:hover {
+  background-color: #f7f7f7;
+  border-color: #999;
+}
+
+.boton-paginacion:disabled {
+  color: #bbb;
+  cursor: not-allowed;
+  border-color: #eee;
+}
+
+.boton-paginacion i {
+  pointer-events: none;
+}
+
 :root {
   --gris-oscuro: #3498db;
   --verde: #71b100;
@@ -788,27 +827,36 @@ h4 {
 
 
 .anuncio {
-  position: relative; /* Para que el contenido del anuncio sea el contenedor de referencia */
+  position: relative;
+  /* Para que el contenido del anuncio sea el contenedor de referencia */
 }
 
 .btn-favorito {
   position: absolute;
-  top: 10px; /* Ajusta según necesites */
-  right: 10px; /* Ajusta según necesites */
-  background: transparent; /* Fondo transparente */
-  border: none; /* Elimina cualquier borde */
-  padding: 0; /* Sin relleno adicional */
-  z-index: 10; /* Asegura que el botón esté encima de la imagen */
+  top: 10px;
+  /* Ajusta según necesites */
+  right: 10px;
+  /* Ajusta según necesites */
+  background: transparent;
+  /* Fondo transparente */
+  border: none;
+  /* Elimina cualquier borde */
+  padding: 0;
+  /* Sin relleno adicional */
+  z-index: 10;
+  /* Asegura que el botón esté encima de la imagen */
 }
 
 .btn-favorito img {
-  width: 30px; /* Tamaño del corazón */
+  width: 30px;
+  /* Tamaño del corazón */
   height: 30px;
   cursor: pointer;
 }
 
 .btn-favorito img:hover {
-  transform: scale(1.1); /* Efecto hover opcional */
+  transform: scale(1.1);
+  /* Efecto hover opcional */
 }
 
 @media (min-width: 768px) {

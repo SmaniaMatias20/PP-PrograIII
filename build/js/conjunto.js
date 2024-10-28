@@ -46,7 +46,7 @@ const propiedades = {
       "../src/anuncios/anuncio1/baño.jpg",
       "../src/anuncios/anuncio1/dormitorio.jpg"
     ],
-    descripcion: "Descubre esta impresionante casa de lujo con vistas espectaculares al lago...",
+    descripcion: "Descubre esta impresionante casa de lujo con vistas espectaculares al lago y acabados de alta gama en cada rincón. La propiedad cuenta con un diseño moderno y elegante, ofreciendo una combinación perfecta de confort y exclusividad. Los amplios ventanales permiten la entrada de abundante luz natural, resaltando la sofisticación de los espacios interiores, que incluyen una cocina gourmet equipada con electrodomésticos de última generación, baños de mármol con duchas a ras de suelo, y dormitorios espaciosos con vestidores. En el exterior, encontrarás una gran terraza con zona de barbacoa, una piscina infinita con vista panorámica, y un jardín cuidadosamente diseñado. La casa también cuenta con un sistema de seguridad avanzado y domótica para control total de iluminación, temperatura y más desde tu dispositivo móvil.",
     precio: "$3,000,000",
     sanitarios: 3,
     estacionamientos: 5,
@@ -61,7 +61,7 @@ const propiedades = {
       "../src/anuncios/anuncio2/baño.jpg",
       "../src/anuncios/anuncio2/dormitorio.jpg"
     ],
-    descripcion: "Vive en esta moderna casa que combina estilo y funcionalidad...",
+    descripcion: "Vive en esta moderna casa que combina estilo y funcionalidad, ubicada en un vecindario tranquilo y accesible. Con un diseño contemporáneo y acabados de calidad, esta propiedad cuenta con un amplio balcón que se convierte en el espacio perfecto para relajarse y disfrutar de las vistas al jardín. La cocina está equipada con muebles de madera, encimeras de granito y electrodomésticos de última generación, ideal para los amantes de la cocina. Los dormitorios son luminosos y espaciosos, proporcionando un ambiente acogedor y privado, mientras que los baños están diseñados con un enfoque en el confort, incluyendo duchas modernas y acabados elegantes. La casa también cuenta con un jardín privado, perfecto para reuniones familiares o simplemente disfrutar de un día al aire libre. Además, su ubicación estratégica te permite acceder fácilmente a escuelas, supermercados y zonas recreativas.",
     precio: "$2,000,000",
     sanitarios: 3,
     estacionamientos: 3,
@@ -76,7 +76,7 @@ const propiedades = {
       "../src/anuncios/anuncio3/baño.jpg",
       "../src/anuncios/anuncio3/dormitorio.jpg"
     ],
-    descripcion: "Esta moderna casa, con acceso privado a la playa...",
+    descripcion: "Esta moderna casa, con acceso privado a la playa, es el refugio perfecto para quienes buscan disfrutar del sol y el mar en un entorno exclusivo. Con un diseño elegante y funcional, la casa cuenta con amplias ventanas que permiten la entrada de luz natural, creando un ambiente cálido y acogedor. La cocina, equipada con electrodomésticos de alta gama y un diseño contemporáneo, se integra perfectamente con el salón, que ofrece vistas panorámicas al océano. Los dormitorios son ideales para descansar después de un día en la playa, y el baño principal cuenta con una ducha de lujo y acabados de calidad. Además, la propiedad incluye un pequeño jardín y una terraza, perfectos para disfrutar de comidas al aire libre o relajarse mientras se escucha el sonido de las olas. Ubicada en una zona tranquila, esta casa es una oportunidad única para vivir la experiencia de una vida costera, cerca de restaurantes, tiendas y actividades recreativas.",
     precio: "$4,500,000",
     sanitarios: 2,
     estacionamientos: 1,
@@ -91,7 +91,7 @@ const propiedades = {
       "../src/anuncios/anuncio4/baño.jpg",
       "../src/anuncios/anuncio4/dormitorio.jpg"
     ],
-    descripcion: "Sumérgete en la vida urbana con esta moderna casa...",
+    descripcion: "Sumérgete en la vida urbana con esta moderna casa, diseñada para quienes buscan la combinación perfecta entre estilo y comodidad. Con una fachada contemporánea que destaca en el vecindario, esta propiedad cuenta con amplios espacios abiertos que facilitan la convivencia. La cocina, equipada con electrodomésticos de última generación y acabados de alta calidad, se integra perfectamente con el salón, creando un ambiente ideal para el entretenimiento. Los cinco dormitorios, todos con armarios empotrados, ofrecen el espacio necesario para una familia en crecimiento. Los cuatro sanitarios, que incluyen un baño principal con bañera y ducha separadas, garantizan comodidad y privacidad. Además, disfrutarás de un jardín privado donde podrás relajarte o recibir a amigos y familiares. Esta casa no solo es un hogar, sino un estilo de vida que te permite disfrutar de todas las ventajas de la vida urbana, con fácil acceso a tiendas, restaurantes y parques. ¡No pierdas la oportunidad de vivir en un lugar que redefine el concepto de modernidad y confort!",
     precio: "$4,200,000",
     sanitarios: 4,
     estacionamientos: 2,
@@ -106,7 +106,7 @@ const propiedades = {
       "../src/anuncios/anuncio5/baño.jpg",
       "../src/anuncios/anuncio5/dormitorio.jpg"
     ],
-    descripcion: "Disfruta de la tranquilidad en esta propiedad minimalista...",
+    descripcion: "Disfruta de la tranquilidad en esta propiedad minimalista, donde la simplicidad se encuentra con la elegancia. Diseñada para ofrecer un ambiente sereno y despejado, esta casa destaca por sus líneas limpias y su uso inteligente del espacio. La cocina, con su diseño funcional y moderno, es perfecta para preparar comidas en un entorno que promueve la calma y la concentración. Los tres dormitorios son luminosos y acogedores, proporcionando un refugio ideal para descansar y recargar energías. Cada uno cuenta con grandes ventanales que permiten la entrada de luz natural y ofrecen vistas al jardín, creando una conexión armoniosa con el entorno. Los tres sanitarios están diseñados con acabados de calidad y un estilo contemporáneo que refleja la estética minimalista de la casa. La propiedad también incluye un espacio exterior privado, perfecto para disfrutar de momentos de paz o para socializar en un ambiente íntimo. Ubicada en una zona tranquila, esta casa no solo es un hogar, sino un santuario donde la vida cotidiana se siente más relajada y equilibrada. ¡Descubre la belleza de vivir con menos y disfrutar de lo esencial!",
     precio: "$3,800,000",
     sanitarios: 3,
     estacionamientos: 2,
@@ -121,7 +121,22 @@ const propiedades = {
       "../src/anuncios/anuncio6/baño.jpg",
       "../src/anuncios/anuncio6/dormitorio.jpg"
     ],
-    descripcion: "Aprovecha esta excelente oportunidad de adquirir una casa con alberca...",
+    descripcion: "Aprovecha esta excelente oportunidad de adquirir una casa con alberca, donde el lujo y la comodidad se encuentran en perfecta armonía. Esta impresionante propiedad cuenta con una amplia alberca rodeada de un hermoso jardín, ideal para disfrutar de días soleados y organizar reuniones con familiares y amigos. La cocina, moderna y completamente equipada, es un sueño para cualquier amante de la gastronomía, con suficiente espacio para preparar deliciosas comidas y disfrutar de momentos inolvidables. Los cuatro dormitorios son espaciosos y están diseñados para maximizar el confort, ofreciendo un refugio acogedor para descansar después de un largo día. Cada dormitorio tiene vistas al jardín, creando un ambiente de tranquilidad y serenidad. Los tres sanitarios están equipados con acabados contemporáneos y toques de elegancia, lo que añade un valor adicional a la propiedad. Esta casa es perfecta para quienes buscan un estilo de vida activo y relajado, donde la diversión y el descanso coexisten. Con estacionamiento para tres vehículos, la comodidad está garantizada. No pierdas la oportunidad de vivir en este oasis privado, donde cada día puede sentirse como vacaciones.",
+    precio: "$3,000,000",
+    sanitarios: 3,
+    estacionamientos: 3,
+    dormitorios: 4,
+    ubicacion: { lat: -34.6132, lng: -58.3733 },
+  },
+  7: {
+    titulo: "Casa con pileta",
+    imagen: "../src/anuncios/anuncio6/propiedad.jpg",
+    imagenesInterior: [
+      "../src/anuncios/anuncio6/cocina.jpg",
+      "../src/anuncios/anuncio6/baño.jpg",
+      "../src/anuncios/anuncio6/dormitorio.jpg"
+    ],
+    descripcion: "Descubre esta maravillosa casa con pileta, un refugio ideal para aquellos que buscan un estilo de vida relajante y lujoso. Esta propiedad está diseñada para disfrutar de momentos inolvidables en compañía de amigos y familiares, con una amplia pileta que invita a refrescarse en los días calurosos. La zona exterior está rodeada de un hermoso jardín, perfecto para organizar barbacoas o simplemente relajarse al sol. La moderna cocina, equipada con electrodomésticos de alta gama, ofrece un espacio amplio y funcional para cocinar y compartir deliciosas comidas. Los cuatro dormitorios son luminosos y espaciosos, cada uno diseñado para proporcionar el máximo confort y tranquilidad, asegurando un descanso reparador. Con tres sanitarios contemporáneos que combinan estilo y funcionalidad, la comodidad está garantizada para todos los residentes y visitantes. La casa también incluye espacio de estacionamiento para tres vehículos, asegurando que nunca te falte lugar para tus coches. Esta es una oportunidad única para adquirir un hogar que no solo es una inversión, sino un lugar donde crear recuerdos duraderos. No dejes pasar la oportunidad de vivir en este maravilloso espacio que combina modernidad y naturaleza.",
     precio: "$3,000,000",
     sanitarios: 3,
     estacionamientos: 3,
@@ -129,8 +144,6 @@ const propiedades = {
     ubicacion: { lat: -34.6132, lng: -58.3733 },
   },
 };
-
-
 //#endregion
 
 /// <summary>
@@ -140,6 +153,7 @@ var yearElement = document.getElementById("year");
 var currentYear = new Date().getFullYear();
 yearElement.textContent = currentYear;
 
+//#region  DarkMode
 /// <summary>
 /// Configura el modo oscuro de la aplicación basado en la preferencia del usuario.
 /// </summary>
@@ -184,6 +198,7 @@ function darkMode() {
     }
   });
 }
+//#endregion
 
 /// <summary>
 /// Configura los eventos para el menú móvil.
@@ -201,8 +216,6 @@ function toggleNavigation() {
   document.querySelector(".navegacion").classList.toggle("mostrar");
 }
 
-
-
 /// <summary>
 /// Resume un texto a una longitud máxima especificada.
 /// </summary>
@@ -214,23 +227,31 @@ function resumirTexto(texto, longitudMaxima) {
     ? texto.substring(0, longitudMaxima) + '...'
     : texto;
 }
-//#region  Metodos para propiedades
+
+
+//#region  Propiedades
 /// <summary>
 /// Carga las propiedades en el contenedor especificado.
 /// </summary>
 /// <param name="limite">Número máximo de propiedades a cargar.</param>
 
+let paginaActual = 1;
+const itemsPorPagina = 6;
 function cargarPropiedades(limite = Object.keys(propiedades).length) {
-
   const contenedor = document.querySelector(".contenedor-anuncios");
+  contenedor.innerHTML = ""; // Limpiar las propiedades anteriores
 
   const longitudMaximaDescripcion = 50; // Longitud máxima de la descripción
+  const totalPropiedades = Object.keys(propiedades).length;
+  const totalPaginas = Math.ceil(totalPropiedades / itemsPorPagina);
 
-  Object.keys(propiedades).slice(0, limite).forEach(key => {
+  const primerIndice = (paginaActual - 1) * itemsPorPagina;
+  const ultimoIndice = Math.min(primerIndice + itemsPorPagina, limite);
+
+  Object.keys(propiedades).slice(primerIndice, ultimoIndice).forEach(key => {
     const propiedad = propiedades[key];
     const anuncio = document.createElement('div');
     anuncio.classList.add('anuncio');
-
 
     anuncio.innerHTML = `
       <picture>
@@ -261,6 +282,39 @@ function cargarPropiedades(limite = Object.keys(propiedades).length) {
 
     contenedor.appendChild(anuncio);
   });
+
+  mostrarPaginacion(totalPaginas);
+}
+
+function mostrarPaginacion(totalPaginas) {
+  const paginacionContenedor = document.querySelector(".contenedor-paginacion");
+  paginacionContenedor.innerHTML = ""; // Limpiar la paginación anterior
+
+  // Botón "Anterior" con flecha
+  const botonAnterior = document.createElement("button");
+  botonAnterior.innerHTML = `<i class="bi bi-arrow-left"></i>`; // Ícono de flecha izquierda
+  botonAnterior.classList.add("boton-paginacion");
+  botonAnterior.disabled = (paginaActual === 1); // Deshabilitar si estamos en la primera página
+  botonAnterior.addEventListener("click", () => {
+    if (paginaActual > 1) {
+      paginaActual--;
+      cargarPropiedades();
+    }
+  });
+  paginacionContenedor.appendChild(botonAnterior);
+
+  // Botón "Siguiente" con flecha
+  const botonSiguiente = document.createElement("button");
+  botonSiguiente.innerHTML = `<i class="bi bi-arrow-right"></i>`; // Ícono de flecha derecha
+  botonSiguiente.classList.add("boton-paginacion");
+  botonSiguiente.disabled = (paginaActual === totalPaginas); // Deshabilitar si estamos en la última página
+  botonSiguiente.addEventListener("click", () => {
+    if (paginaActual < totalPaginas) {
+      paginaActual++;
+      cargarPropiedades();
+    }
+  });
+  paginacionContenedor.appendChild(botonSiguiente);
 }
 
 /// <summary>
@@ -331,6 +385,7 @@ function inicializarMapa(location) {
 }
 //#endregion
 
+//#region  Articulos
 /// <summary>
 /// Carga los artículos en la lista según la página actual.
 /// </summary>
@@ -405,8 +460,9 @@ document.addEventListener("DOMContentLoaded", function () {
     interval: 200 // Animación con un intervalo de 200 ms entre elementos
   });
 });
+//#endregion
 
-//#region reservaS 
+//#region Reservas
 
 /// <summary>
 /// Configura los eventos para eliminar reservas.

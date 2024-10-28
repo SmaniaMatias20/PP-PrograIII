@@ -48,48 +48,28 @@
 
     <h2>Llene el formulario de Contacto</h2>
 
-    <form class="formulario">
+    <form class="formulario" action="YOUR_FORMSPREE_ENDPOINT" method="POST">
       <fieldset>
         <legend>Información Personal</legend>
 
         <label for="nombre">Nombre</label>
-        <input type="text" placeholder="Tu Nombre" id="nombre" />
+        <input type="text" placeholder="Tu Nombre" id="nombre" name="nombre" required />
 
         <label for="email">E-mail</label>
-        <input type="email" placeholder="Tu E-mail" id="email" />
+        <input type="email" placeholder="Tu E-mail" id="email" name="email" required />
 
         <label for="telefono">Teléfono</label>
-        <input type="tel" placeholder="Tu Teléfono" id="telefono" />
+        <input type="tel" placeholder="Tu Teléfono" id="telefono" name="telefono" required />
 
         <label for="mensaje">Mensaje: </label>
-        <textarea id="mensaje"></textarea>
+        <textarea id="mensaje" name="mensaje" required></textarea>
       </fieldset>
-      <fieldset>
-        <legend>Información sobre la propiedad</legend>
-
-        <p>Como desea ser contactado</p>
-        <div class="forma-contacto">
-          <label for="contactar-telefono">Teléfono</label>
-          <input name="contacto" type="radio" value="telefono" id="contactar-telefono" />
-          <label for="contactar-email">Email</label>
-          <input name="contacto" type="radio" value="email" id="contactar-email" />
-        </div>
-
-        <p>Si eligió teléfono, elija la fecha y hora</p>
-        <label for="fecha">Fecha</label>
-        <input type="date" id="fecha" />
-
-        <label for="hora">Hora</label>
-        <input type="time" id="hora" min="09:00" max="18:00" />
-      </fieldset>
-
       <input type="submit" value="Enviar" class="boton-verde" />
     </form>
   </main>
 
   <footer class="footer seccion">
     <div class="contenedor contenedor-footer">
-
       <div class="ubicacion">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d52541.03595860431!2d-58.434280053100586!3d-34.60884568820924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1726615310804!5m2!1ses-419!2sar"
@@ -115,9 +95,35 @@
       <p id="copyright" class="copyright">
         @Todos los derechos reservados <span id="year">&copy;</span>
       </p>
-
     </div>
   </footer>
+
+  <script>
+    document.querySelector('.formulario').addEventListener('submit', function (event) {
+      event.preventDefault(); // Prevent the default form submission
+
+      const formData = new FormData(this);
+
+      fetch(this.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+        .then(response => {
+          if (response.ok) {
+            alert('Gracias por tu mensaje!'); // Success message
+            this.reset(); // Reset the form
+          } else {
+            alert('Ocurrió un error, por favor intenta nuevamente.'); // Error message
+          }
+        })
+        .catch(error => {
+          alert('Ocurrió un error, por favor intenta nuevamente.'); // Error message
+        });
+    });
+  </script>
 
   <script src="../js/conjunto.js"></script>
 </body>
